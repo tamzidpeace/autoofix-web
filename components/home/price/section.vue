@@ -33,7 +33,7 @@
                         class="h-[629px] lg:h[714px] lg:w-[447pxx] bg-[#FFF] lg:bg-white rounded-3xl border-2 m-4 lg:m-0">
                         <div class="pt-8">
                             <section class="flex justify-center">
-                                <img src="~/assets/img/bi_truck.png" alt="">
+                                <img src="~/assets/img/carlight.png" alt="">
                             </section>
                             <section class="flex justify-center">
                                 <p>Lite</p>
@@ -96,9 +96,9 @@
                     <!-- Price section 2 -->
                     <section
                         class="h-[629px] lg:h[714px] lg:w-[447pxx] bg-[#646BEE] text-white rounded-3xl border-2 m-4 lg:m-0">
-                        <div class="pt-8">
+                        <div class="pt-4">
                             <section class="flex justify-center">
-                                <img src="~/assets/img/bi_truck.png" alt="">
+                                <img src="~/assets/img/yellowsmallcar.png" alt="">
                             </section>
                             <section class="flex justify-center">
                                 <p>Plus</p>
