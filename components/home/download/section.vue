@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- download section web+mobile start -->
-        <section class="bg-[#DABDFF] mt-5">
+        <section class="bg-[#DABDFF]">
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <!-- download left section -->
                 <div
@@ -47,7 +47,7 @@
                         alt="">
                 </div>
                 <!-- download right section -->
-                <div class="download-image-section flex items-end justify-end bg-[url('~/assets/img/downloadAppImageBG')]">
+                <div class="pt-14 download-image-section flex items-end justify-end bg-[url('~/assets/img/downloadAppImageBG')]">
                     <div class="relative ">
                         <img class="absolute top-[60%] left-[7%]" src="~/assets/img/dv.png" alt="">
                         <img class="" src="~/assets/img/downloadAppImage.png" alt="">

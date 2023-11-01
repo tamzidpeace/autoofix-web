@@ -1,6 +1,6 @@
 <template>
     <!-- body hero section mobile & web start-->
-    <section class="h-[730px] md:h-auto lg:h-[50rem] header-main-section bg-[#646bee] w-full">
+    <section class="h-[730px] md:h-auto lg:h-[60rem] header-main-section bg-[#646bee] w-full">
         <section class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full w-100">
             <!-- left-side-section start -->
             <section class="h-full flex items-center justify-center lg:mt-10">
