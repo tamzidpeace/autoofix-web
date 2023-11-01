@@ -1,7 +1,7 @@
 <template>
   <main>
-    <IndexHeroSection />
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <HomeHeroSection />
+    <h1 class="text-3xl font-bold underline">Hello world !!</h1>
     <!-- <template>
       <div>
         <h1>Welcome to the homepage</h1>
