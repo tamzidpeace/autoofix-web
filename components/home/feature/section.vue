@@ -1,6 +1,6 @@
 <template>
     <section class="h-[1160px] lg:h-[920px] bg-[#FFF]">
-        <section class="pt-10">
+        <section class="pt-20">
             <div class="flex justify-center">
                 <p class="font-bold text-[24px]">Our Features</p>
             </div>
