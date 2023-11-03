@@ -147,7 +147,7 @@
                                         </div>
                                     </section>
                                     <section class="pt-4 lg:pt-1">
-                                        <p class="border-b-2 w-3/6 border-black">+10 More Features</p>
+                                        <p class="border-b-2 w-3/6 border-white">+10 More Features</p>
                                     </section>
                                 </section>
                             </section>
