@@ -10,9 +10,22 @@ const formData = ref({
 });
 
 let inputClass = 'w-full rounded-[8px] border border-1 border-[#D0D5DD]';
+const showSuccessMessage = ref(false);
 
-const submitForm = () => {
-   //Handle form submission logic here
+const submitForm = async (event) => {
+  event.preventDefault();
+  try {
+    //later Simulate a POST request to an API
+    const response = await axios.post('dummy/api', formData.value);
+
+    if (response.status === 200) {
+      // Form submission was successful
+      showSuccessMessage.value = true;
+      formData.value = '';
+    }
+  } catch (error) {
+    console.error('Form submission error:', error);
+  }
 };
 
 </script>
@@ -25,7 +38,7 @@ const submitForm = () => {
         </div>
         <div>
           <h1 class="text-4xl font-bold mb-4">Let’s Get in Touch</h1>
-          <form onsubmit="submitForm">
+          <form @submit.prevent="submitForm">
             <div class="flex flex-col">
               <div class="flex flex-col mb-4">
                 <label class="w-full">Your Name</label>

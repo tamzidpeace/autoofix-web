@@ -76,7 +76,7 @@ import Image3 from "../../../assets/img/blogs/Rectangle 53.png"
                 </div>
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col hidden lg:block">
                 <div class="flex mb-[30px]">
                     <img :src="Image1" alt="" class="object-cover">
                     <div class="w-full pl-[29px]">
