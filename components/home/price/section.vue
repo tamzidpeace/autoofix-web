@@ -402,8 +402,7 @@
                   </section>
                   <section class="pt-6 ps-4 pe-4">
                     <p class="text-[16px] mb-5">
-                      Perfect for Standard Packages that are just getting
-                      started. It is a long established the fact.
+                      {{ price.description }}
                     </p>
                     <section class="lg:h-[225px]">
                       <div class="flex mb-2">
