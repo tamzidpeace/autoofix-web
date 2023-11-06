@@ -4,7 +4,7 @@ description: 'meta description of the page'
 abc: '[
   {
     id: 1,
-    title: "Lite",
+    title: "linkon",
     priceMonth: 2500,
     priceYear: 4500,
     description:

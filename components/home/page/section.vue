@@ -1,5 +1,5 @@
 <template>  
-  <HomeHeroSection />
+  <!-- <HomeHeroSection />
   <HomeFeatureSection />
   <HomeProductSection />
   <HomeJobCardSection />
@@ -8,6 +8,8 @@
   <HomeQuotationSection />
   <HomeReportSection />
   <HomeDownloadSection />
+   -->
   <HomePriceSection />
+
   <HomeTestimonialsSection />
 </template>

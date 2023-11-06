@@ -1,4 +1,11 @@
 <template>
+  <div>
+    <ContentRendererMarkdown :value="data" :data="mdcVars" />
+    <button type="button" v-on:click="mdcVars.name = 'Hugo'">
+      Change name btn
+    </button>
+  </div>
+
   <div class="hidden lg:block">
     <!-- body price section start -->
     <section
@@ -488,7 +495,29 @@
     <!-- body price section end -->
   </div>
 </template>
-<script>
+<script setup>
+const contentQuery = queryContent("prices", "1.lite");
+
+const { data } = await useAsyncData(() => queryContent("prices"));
+console.log("contentQuery", contentQuery);
+console.log("data", data);
+// const mdcVars = ref({ name: "Maxime" });
+
+// defineProps({
+//   title: {
+//     type: String,
+//     default: "Default title",
+//   },
+//   description: {
+//     type: String,
+//     default: "Default description",
+//   },
+//   icon: {
+//     type: String,
+//     default: "IconMarkdown",
+//   },
+// });
+
 const prices = [
   {
     id: 1,
@@ -549,10 +578,4 @@ const prices = [
     color: "bg-[#FFF]",
   },
 ];
-
-// const { data } = await useAsyncData('get-document', () => queryContent(route.path).findOne())
-// const contentQuery = queryContent("prices");
-// console.log("query content", contentQuery)
-// const { toc } = useContent();
-// console.log("toc", toc);
 </script>
