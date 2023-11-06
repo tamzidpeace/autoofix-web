@@ -10,7 +10,18 @@ export default {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'blue' : {
+          1 : "",
+          2 : "",
+        },
+        'purple': {
+          1 : '#646BEE',
+          2 : '',
+        }
+      },
+    },
   },
   plugins: [require('flowbite/plugin')],
 }

@@ -7,4 +7,8 @@
 
     <HomeDownloadSection />
     <HomePriceSection />
+    <HomeFaqsSection/>
+    <HomeBlogsSection/>
+    <HomeGetInTouchSection/>
+
 </template>
