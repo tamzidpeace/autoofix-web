@@ -4,7 +4,9 @@
     <HomeProductSection />
     <HomeJobCardSection />
     <HomeSalesOrderSection />
-
+    <HomeInvoiceSection />
+    <HomeQuotationSection />
+    <HomeReportSection />
     <HomeDownloadSection />
     <HomePriceSection />
     <HomeFaqsSection/>
