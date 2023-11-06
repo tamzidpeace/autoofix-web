@@ -30,15 +30,15 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
       <div class="col-span-4 grid grid-cols-2">
         <div class="flex flex-col">
           <h1 class="text-2xl mb-6 font-bold">Useful Link</h1>
-        <div v-for="link in usefulLinks">
+        <span v-for="link in usefulLinks">
           <a :key="link.id" :href="link.url" class="mb-3">{{ link.text }}</a>
-        </div>
+        </span>
         </div>
         <div class="flex flex-col">
           <h1 class="text-2xl mb-6 font-bold">Support</h1>
-          <div v-for="link in supportLinks">
+          <span v-for="link in supportLinks">
             <a :key="link.id" :href="link.url" class="mb-3">{{ link.text }}</a>
-          </div>
+          </span>
         </div>
       </div>
       <div class="col-span-4">
@@ -106,7 +106,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
     </div>
     <div class="flex justify-between px-9 items-center">
       <p class="">Copyright © 2023 Softzino Technologies</p>
-      <div class="flex space-x-6 hidden xl:block">
+      <div class="flex space-x-6">
         <button :class="buttonClass">
           <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.15639 0.965197C1.03827 1.2327 0.973022 1.56046 0.973022 1.94172V24.0577C0.973022 24.4398 1.03835 24.7676 1.15661 25.035L13.1905 12.9993L1.15639 0.965197ZM1.85161 25.7542C2.29766 25.9451 2.87953 25.8845 3.51402 25.5247L17.6711 17.4799L13.8976 13.7065L1.85161 25.7542ZM18.5736 16.9682L23.015 14.4447C24.412 13.6497 24.412 12.3507 23.015 11.5567L18.5716 9.03184L14.6047 12.9993L18.5736 16.9682ZM17.6698 8.51943L3.51402 0.475724C2.87949 0.115146 2.29759 0.054983 1.85153 0.246121L13.8976 12.2922L17.6698 8.51943Z" fill="white"/>
@@ -126,7 +126,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
         </button>
       </div>
     </div>
-    <div class="flex justify-between hidden xl:block">
+    <div class="flex justify-between">
       <img :src="TireImg" alt="" class="absolute 2xl:left-[80px] left-[40px] bottom-0">
       <hr class="h-px bg-white border-1 w-full dark:bg-gray-700 mt-[-70px]">
       <img :src="TireImg" alt="" class="absolute 2xl:right-[80px] right-[40px] bottom-0">
