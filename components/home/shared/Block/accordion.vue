@@ -21,7 +21,7 @@ function showHide(item) {
        :class="[item.open && 'border border-1 border-[#646BEE]']"
   >
       <h2 class="p-4 xl:text-lg text-md"
-      :class = "[item.open ? 'bg-[#646BEE] text-white' : ' text-[#6D6D6D] border border-solid bg-[#FBFBFB] border-1 border-[#F0EEFE] rounded-l-[4px] border-l-4 border-l-[#646BEE]']"
+      :class = "[item.open ? 'bg-[#646BEE] text-white' : 'text-[#6D6D6D] border border-solid bg-[#FBFBFB] border-1 border-[#F0EEFE] shadow-sm border-l-4 border-l-[#646BEE] rounded-[4px] rounded-l-[6px]']"
       >
           <button type="button"
                   @click="showHide(item)"

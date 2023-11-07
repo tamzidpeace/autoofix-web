@@ -9,7 +9,7 @@
   <HomeReportSection />
   <HomeDownloadSection />
   <HomePriceSection />
-  <HomeTestimonialsSection />
+  <HomeTestimonialSection />
   <HomeFaqsSection/>
   <HomeBlogsSection/>
   <HomeGetInTouchSection/>
