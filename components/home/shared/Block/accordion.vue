@@ -36,13 +36,21 @@ function showHide(item) {
               </svg>
           </button>
       </h2>
-      <div class="p-4 bg-[#FBFBFB]" :class="{hidden : !item.open}">
-          <div class="font-normal text-base">
-              <p class="text-[#4E4E4E]">{{ item.content }}</p>
+      <transition name="fade">
+          <div class="p-4 bg-[#FBFBFB] transform transition-transform" :class="{hidden : !item.open}">
+              <div class="font-normal text-base">
+                  <p class="text-[#4E4E4E]">{{ item.content }}</p>
+              </div>
           </div>
-      </div>
+      </transition>
   </div>
 </template>
 
 <style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
