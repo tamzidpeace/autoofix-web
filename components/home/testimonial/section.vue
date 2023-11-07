@@ -1,30 +1,5 @@
 <script setup>
-const testimonials = [
-  {
-    id: 1,
-    name: "Darlene Robertson",
-    title: "Branch Manager of Auto Garage",
-    image: "",
-    description:
-        "Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS.",
-  },
-  {
-    id: 2,
-    name: "Darlene Robertson",
-    title: "Branch Manager of Auto Garage",
-    image: "",
-    description:
-        "Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS.",
-  },
-  {
-    id: 3,
-    name: "Darlene Robertson",
-    title: "Branch Manager of Auto Garage",
-    image: "",
-    description:
-        "Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS.",
-  },
-];
+import {testimonials} from "./data.js";
 </script>
 
 <template>
@@ -33,7 +8,7 @@ const testimonials = [
       <h1 class="font-bold 2xl:text-3xl text-center mb-8">What our clients think about us?</h1>
       <div class="2xl:mx-[8.25rem] 2xl:pb-[3.5rem]">
         <div>
-<!--          <Swiper
+          <Swiper
               :modules="[ SwiperNavigation, SwiperVirtual, SwiperPagination]"
               :slidesPerView="3"
               :centeredSlides="true"
@@ -50,7 +25,7 @@ const testimonials = [
                 :key="index"
                 :virtualIndex="index"
             >
-              <div
+<!--              <div
                   class="h-[540px] bg-[#FAF9FF] w-[745px] rounded-2xl flex justify-center border-2 border-sky-800"
               >
                 <div class="relative p-4 h-full w-5/6 pt-12">
@@ -76,10 +51,10 @@ const testimonials = [
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </SwiperSlide
             >
-          </Swiper>-->
+          </Swiper>
         </div>
         <div></div>
         <div></div>

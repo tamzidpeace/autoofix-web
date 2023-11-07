@@ -1,24 +1,6 @@
 <script setup>
-const sections1 = [
-  {
-    title: "Increased Productivity Growth?",
-    content: "Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS",
-  },
-  {
-    title: "Cost Cutting Through Effective Management?",
-    content: "Content for 'Cost Cutting Through Effective Management?'",
-  },
-  {
-    title: "What are the benefits of using garage management software?",
-    content: "Content for 'What are the benefits of using garage management software?'",
-  },
-  {
-    title: "How can garage help streamline my operations?",
-    content: "Content for 'How can garage help streamline my operations?'",
-  },
-]
+import {sections1, sections2} from "./data.js";
 </script>
-
 <template>
   <section>
       <div class="2xl:px-[16.25rem] 2xl:py-[7.75rem] bg-[#F0EEFE] lg:px-[6rem] lg:py-[4rem] px-[1rem] py-[44px]">
@@ -37,7 +19,7 @@ const sections1 = [
                   <HomeSharedBlockAccordion :items="sections1"/>
               </div>
               <div>
-                  <HomeSharedBlockAccordion :items="sections1"/>
+                  <HomeSharedBlockAccordion :items="sections2"/>
               </div>
           </div>
       </div>
