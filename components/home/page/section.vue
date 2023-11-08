@@ -7,6 +7,7 @@
   <HomeInvoiceSection />
   <HomeQuotationSection />
   <HomeReportSection />
+  <HomeChooseSection />
   <HomeDownloadSection />
   <HomePriceSection />
   <HomeTestimonialSection />

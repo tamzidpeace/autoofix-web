@@ -2,7 +2,7 @@
     <!-- for web -->
     <section class="hidden lg:block bg-[#FDFCFD]">
         <div class="grid grid-cols-2 h-full">
-            <div class="flex items-center justify-end ">
+            <div class="flex items-center justify-end px-8 py-12">
                 <div class="w-[685px]">
                     <div class="">
                         <p class="text-[36px] font-[700]">Why Choose Autoofix?</p>
