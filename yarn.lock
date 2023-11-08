@@ -7930,6 +7930,11 @@ vue-router@^4.1.0, vue-router@^4.2.5:
     "@vue/server-renderer" "3.3.7"
     "@vue/shared" "3.3.7"
 
+vue3-carousel@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/vue3-carousel/-/vue3-carousel-0.3.1.tgz"
+  integrity sha512-86vUkNPBzL2PVuR9w6hUsI90ccFjLp+K8cSFpRTISf+SjUQY3fMHc5CFF5MUL62v1xYYm27zEBmQupO9VQx9Kw==
+
 watchpack@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npmjs.org/watchpack/-/watchpack-2.4.0.tgz"

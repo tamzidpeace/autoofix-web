@@ -9,8 +9,8 @@
   <HomeReportSection />
   <HomeChooseSection />
   <HomeDownloadSection />
-  <HomePriceSection />
   <HomeTestimonialSection />
+  <HomePriceSection />
   <HomeFaqsSection/>
   <HomeBlogsSection/>
   <HomeGetInTouchSection/>
