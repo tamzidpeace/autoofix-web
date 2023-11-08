@@ -13,20 +13,42 @@
         <!-- description section end -->
         <!-- choose plan button section start -->
         <div class="flex w-full justify-center">
-          <section
-            class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
-          >
-            <button
-              class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+          <div v-if="selectedPrice === 'month'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
             >
-              Monthly
-            </button>
-            <button
-              class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
+          <div v-if="selectedPrice === 'year'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
             >
-              Yearly
-            </button>
-          </section>
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
         </div>
         <!-- choose plan button section end -->
         <!-- price section start -->
@@ -39,7 +61,7 @@
             <section
               class="rounded-3xl border-2 px-4 py-8"
               :class="[price.bgColor, price.textColor]"
-              >
+            >
               <!-- :class="[price.color, price.textColor]" -->
               <div class="">
                 <section class="flex justify-center">
@@ -111,20 +133,42 @@
         <!-- description section end -->
         <!-- choose plan button section start -->
         <div class="flex w-full justify-center">
-          <section
-            class="lg:h-[58px] border-2 flex justify-center bg-white lg:w-3/12 rounded-full mb-10 mt-5"
-          >
-            <button
-              class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+          <div v-if="selectedPrice === 'month'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
             >
-              Monthly
-            </button>
-            <button
-              class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
+          <div v-if="selectedPrice === 'year'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
             >
-              Yearly
-            </button>
-          </section>
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
         </div>
         <!-- choose plan button section end -->
         <!-- price section start -->
@@ -132,7 +176,7 @@
       </section>
     </section>
     <!-- :loop="true" -->
-    <div class="h-[689px]">
+    <div class="border-2 border-red-800">
       <Swiper
         :modules="[SwiperAutoplay, SwiperEffectCreative]"
         :slides-per-view="1"
@@ -147,7 +191,7 @@
           },
         }"
       >
-        <SwiperSlide v-for="price in prices" :key="price.id">
+        <SwiperSlide v-for="price in priceData" :key="price.id">
           <div>
             <!-- Price section 1 -->
             <section
@@ -156,7 +200,7 @@
             >
               <div class="pt-8 h-full">
                 <section class="flex justify-center">
-                  <img src="~/assets/img/carlight.png" alt="" />
+                  <img :src="price.image ?? ''" alt="" />
                 </section>
                 <section class="flex justify-center">
                   <p>{{ price?.title }}</p>
@@ -164,7 +208,7 @@
                 <section class="pt-4 lg:h-[450px]">
                   <section class="flex justify-center">
                     <p class="m-0 text-5xl font-[600] leading-none">
-                      ${{ price?.priceMonth }}
+                      ${{ price?.price }}
                     </p>
                     <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
                   </section>
@@ -230,8 +274,13 @@
                         <p>Balance Sheet</p>
                       </div>
                     </section>
-                    <section class="pt-4 lg:pt-1">
-                      <p class="border-b-2 border-dark-500 w-3/6 border-black">
+                    <section class="py-4" v-if="price == 2">
+                      <p class="border-b-2 border-white w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
+                    <section class="py-4" v-else>
+                      <p class="border-b-2 border-dark-500 w-3/6">
                         +10 More Features
                       </p>
                     </section>
@@ -259,8 +308,18 @@
 
 <script setup>
 import { prices } from "./pricedata";
-const priceData = [...prices];
+const selectedPrice = ref("month");
+let priceData = ref([...prices]);
 let pricesData = [];
+
+const perMonthPrice = () => {
+  selectedPrice.value = "month";
+  console.log("permonthPrice");
+};
+const perYearPrice = () => {
+  selectedPrice.value = "year";
+  console.log("perYearPrice");
+};
 //   {
 //     id: 1,
 //     title: "Lite",
