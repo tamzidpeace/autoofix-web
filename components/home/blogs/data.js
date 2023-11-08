@@ -15,6 +15,12 @@ export const blogInfo = [
             'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
             'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
             'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
+            'mobile and responsive web application for garage management with CMS.' +
+            'obile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
+            'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
+            'mobile and responsive web application for garage management with CMS.' +
+            'obile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
+            'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
             'mobile and responsive web application for garage management with CMS.'
     },
     {

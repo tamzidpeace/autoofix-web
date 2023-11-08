@@ -3,7 +3,7 @@ import { blogInfo } from "./data.js";
 
 </script>
 <template>
-    <div class="2xl:px-[260px] 2xl:py-[130px] lg:px-[6rem] lg:py-[4rem] px-[1rem] py-[44px] bg-gray-1">
+    <div class="3xl:px-[16.25rem] 3xl:py-[8.15rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[1rem] py-[2.75rem] bg-gray-1">
         <div class="flex justify-between mb-8">
             <h1 class="lg:text-4xl text-[18px] font-bold py-2">Our Blogs</h1>
               <HomeBlogsPagination/>
@@ -101,7 +101,7 @@ import { blogInfo } from "./data.js";
         <SwiperSlide v-for="blog in blogInfo" :key="blog.id">
           <div class="w-full lg:hidden">
             <div class="mb-3 w-full flex flex-wrap">
-              <img :src="blog.image" alt="" class=" w-full h-[325px] w-full rounded-[8px]">
+              <img :src="blog.image" alt="" class=" w-full h-[22rem] w-full rounded-[8px]">
             </div>
             <div class="px-4">
               <div class="flex justify-between pb-3 text-gray-8 ">

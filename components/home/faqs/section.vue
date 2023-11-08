@@ -3,7 +3,7 @@ import {sections1, sections2} from "./data.js";
 </script>
 <template>
   <section>
-      <div class="2xl:px-[16.25rem] 2xl:py-[7.75rem] bg-gray-2 lg:px-[6rem] lg:py-[4rem] px-[1rem] py-[44px]">
+      <div class="3xl:px-[16.25rem] 3xl:py-[7.75rem] xl:px-[10rem] bg-gray-2 lg:px-[3rem] lg:py-[4rem] px-[1rem] py-[2.75rem]">
           <div class="flex flex-col items-center mb-8">
               <div class="mb-2">
                   <h1 class="text-4xl text-center font-bold">Frequently Asked Questions </h1>

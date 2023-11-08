@@ -18,7 +18,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
 </script>
 
 <template>
-  <div class="image-container px-[1rem] py-[16px] text-white relative xl:px-[16.25rem] xl:pt-[94px]" >
+  <div class="image-container px-[1rem] py-[16px] text-white relative 3xl:px-[16.25rem] 3xl:py-[3.75px] xl:px-[10rem] xl:pt-[94px] lg:px-[4rem] " >
     <div class="lg:grid lg:grid-cols-12 lg:gap-8 mb-[40px]">
       <div class="col-span-4">
         <img :src="Logo" alt="" class="mb-6">
@@ -106,13 +106,14 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
     </div>
     <div class="flex justify-between px-9 items-center">
       <p class="">Copyright © 2023 Softzino Technologies</p>
+      <div class="  lg:block hidden">
       <div class="flex space-x-6">
         <button :class="buttonClass">
           <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.15639 0.965197C1.03827 1.2327 0.973022 1.56046 0.973022 1.94172V24.0577C0.973022 24.4398 1.03835 24.7676 1.15661 25.035L13.1905 12.9993L1.15639 0.965197ZM1.85161 25.7542C2.29766 25.9451 2.87953 25.8845 3.51402 25.5247L17.6711 17.4799L13.8976 13.7065L1.85161 25.7542ZM18.5736 16.9682L23.015 14.4447C24.412 13.6497 24.412 12.3507 23.015 11.5567L18.5716 9.03184L14.6047 12.9993L18.5736 16.9682ZM17.6698 8.51943L3.51402 0.475724C2.87949 0.115146 2.29759 0.054983 1.85153 0.246121L13.8976 12.2922L17.6698 8.51943Z" fill="white"/>
           </svg>
             <span class="flex flex-col items-start"><span class="text-[8px]">GET IT ON</span>
-            <span class="text-md">Google Play</span></span>
+            <span class="text-md font-bold">Google Play</span></span>
         </button>
         <button :class="buttonClass">
           <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,15 +122,16 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
           </svg>
           <span class="flex flex-col items-start">
             <span class="text-[8px]">Download on the </span>
-            <span class="text-md">App Store</span>
+            <span class="text-md font-bold">App Store</span>
           </span>
         </button>
       </div>
     </div>
+    </div>
     <div class="flex justify-between">
-      <img :src="TireImg" alt="" class="absolute 2xl:left-[80px] left-[40px] bottom-0">
-      <hr class="h-px bg-white border-1 w-full dark:bg-gray-700 mt-[-70px]">
-      <img :src="TireImg" alt="" class="absolute 2xl:right-[80px] right-[40px] bottom-0">
+      <img :src="TireImg" alt="" class="absolute 3xl:left-[80px] left-[40px] lg:block hidden bottom-0 z-10">
+      <hr class="h-px bg-white border-1 w-full dark:bg-gray-700 lg:block hidden mt-[-70px]">
+      <img :src="TireImg" alt="" class="absolute 3xl:right-[80px] lg:block hidden right-[40px] bottom-0 z-10">
     </div>
   </div>
 </template>

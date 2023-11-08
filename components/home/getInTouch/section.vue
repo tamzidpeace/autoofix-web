@@ -30,7 +30,7 @@ const submitForm = async (event) => {
 
 </script>
 <template>
-  <div class="2xl:px-[16.25rem] 2xl:py-[60px] lg:px-[6rem] lg:py-[3rem] px-[1rem] py-[44px]">
+  <div class="3xl:px-[16.25rem] 3xl:py-[3.75px] xl:px-[10rem] lg:px-[4rem] lg:py-[2rem] px-[1rem] py-[2.75rem] ">
     <div class="bg-[#F9F9FF] lg:px-[100px] lg:py-[48px]">
       <div class="grid lg:grid-cols-2">
         <div class="mb-6">
