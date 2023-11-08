@@ -2,9 +2,9 @@
   <div class="hidden lg:block">
     <!-- body price section start -->
     <section
-      class="h-[2223px] flex justify-center items-center bg-[#F2F2FD] lg:h-[64rem] lg:w-full"
+      class="flex justify-center items-center bg-[#F2F2FD] lg:px-[6rem] lg:py-[4rem] px-[1rem] py-[44px]"
     >
-      <section class="lg:w-4/6">
+      <section class="3xl:px-[16rem] xl:px-[10rem]">
         <!-- description section start -->
         <section class="text-center">
           <p class="p-2">Our Best Pricing Plan</p>
@@ -14,7 +14,7 @@
         <!-- choose plan button section start -->
         <div class="flex w-full justify-center">
           <section
-            class="lg:h-[58px] border-2 flex justify-center bg-white lg:w-3/12 rounded-full mb-10 mt-5"
+            class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
           >
             <button
               class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
@@ -32,22 +32,22 @@
         <!-- price section start -->
         <!-- grid grid-flow-col auto-cols-max -->
         <section
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-2 gap-6"
         >
           <!-- Price section 1 -->
           <section
-            class="h-[629px] lg:h[714px] lg:w-[447pxx] bg-[#FFF] lg:bg-white rounded-3xl border-2 m-4 lg:m-0"
+            class="bg-[#FFF] rounded-3xl border-2 px-4 "
           >
-            <div class="pt-8">
+            <div class="">
               <section class="flex justify-center">
                 <img src="~/assets/img/carlight.png" alt="" />
               </section>
               <section class="flex justify-center">
                 <p>Lite</p>
               </section>
-              <section class="pt-4 lg:h-[450px]">
+              <section class="">
                 <section class="flex justify-center">
-                  <p class="m-0 text-5xl font-[600] leading-none">$2500</p>
+                  <p class="m-0 text-md lg:text-4xl  font-[600] leading-none">$2500</p>
                   <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
                 </section>
                 <section class="pt-6 ps-4 pe-4">
@@ -328,9 +328,11 @@
         </section>
         <!-- price section end-->
       </section>
+
     </section>
     <!-- body price section end -->
   </div>
+
   <div class="lg:hidden h-[980px] bg-[#FFF] pt-5">
     <!-- body price section start -->
     <section class="flex justify-center items-center">
@@ -488,6 +490,8 @@
     <!-- body price section end -->
   </div>
 </template>
+
+
 <script setup>
 const prices = [
   {
