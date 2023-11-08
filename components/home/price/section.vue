@@ -35,300 +35,66 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-2 gap-6"
         >
           <!-- Price section 1 -->
-          <section
-            class="bg-[#FFF] rounded-3xl border-2 px-4 "
-          >
-            <div class="">
-              <section class="flex justify-center">
-                <img src="~/assets/img/carlight.png" alt="" />
-              </section>
-              <section class="flex justify-center">
-                <p>Lite</p>
-              </section>
-              <section class="">
-                <section class="flex justify-center">
-                  <p class="m-0 text-md lg:text-4xl  font-[600] leading-none">$2500</p>
-                  <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
-                </section>
-                <section class="pt-6 ps-4 pe-4">
-                  <p class="text-[16px] mb-5">
-                    Perfect for Standard Packages that are just getting started.
-                    It is a long established the fact.
-                  </p>
-                  <section class="lg:h-[225px]">
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Unlimited Support</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Sync data across devices</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Create Multiple Firms</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Check Profit on Invoices</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Keep different rates for each party</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Set multiple pricing for items</p>
-                    </div>
-                    <div class="flex">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Balance Sheet</p>
-                    </div>
-                  </section>
-                  <section class="pt-4 lg:pt-1">
-                    <p class="border-b-2 border-dark-500 w-3/6 border-black">
-                      +10 More Features
-                    </p>
-                  </section>
-                </section>
-              </section>
-              <section
-                class="flex justify-center lg:mt-0 lg:h-[56px] pt-6 lg:pt-0"
+          <div v-for="price in priceData">
+            <section
+              class="rounded-3xl border-2 px-4 py-8"
+              :class="[price.bgColor, price.textColor]"
               >
-                <button
-                  class="w-[311px] px-10 py-4 lg:py-0 lg:w-[296px] border-2 rounded-lg text-[#646BEE] font-600"
-                >
-                  Choose Plan
-                </button>
-              </section>
-            </div>
-          </section>
-          <!-- Price section 2 -->
-          <section
-            class="h-[629px] lg:h[714px] lg:w-[447pxx] bg-[#646BEE] text-white rounded-3xl border-2 m-4 lg:m-0"
-          >
-            <div class="pt-4">
-              <section class="flex justify-center">
-                <img src="~/assets/img/yellowsmallcar.png" alt="" />
-              </section>
-              <section class="flex justify-center">
-                <p>Plus</p>
-              </section>
-              <section class="pt-4 lg:h-[450px]">
+              <!-- :class="[price.color, price.textColor]" -->
+              <div class="">
                 <section class="flex justify-center">
-                  <p class="m-0 text-5xl font-[600] leading-none">$4500</p>
-                  <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
+                  <img :src="price.image" alt="pricelogo" />
                 </section>
-                <section class="pt-6 ps-4 pe-4">
-                  <p class="text-[16px] mb-5">
-                    Perfect for Standard Packages that are just getting started.
-                    It is a long established the fact.
-                  </p>
-                  <section class="lg:h-[225px]">
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Unlimited Support</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Sync data across devices</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Create Multiple Firms</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Check Profit on Invoices</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Keep different rates for each party</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Set multiple pricing for items</p>
-                    </div>
-                    <div class="flex">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Balance Sheet</p>
-                    </div>
-                  </section>
-                  <section class="pt-4 lg:pt-1">
-                    <p class="border-b-2 w-3/6 border-white">
-                      +10 More Features
-                    </p>
-                  </section>
-                </section>
-              </section>
-              <section
-                class="flex justify-center lg:mt-0 lg:h-[56px] pt-6 lg:pt-0"
-              >
-                <button
-                  class="w-[311px] px-10 py-4 bg-white lg:py-0 lg:w-[296px] rounded-lg text-[#646BEE] font-600"
-                >
-                  Choose Plan
-                </button>
-              </section>
-            </div>
-          </section>
-          <!-- Price section 3 -->
-          <section
-            class="h-[629px] lg:h[714px] lg:w-[447pxx] bg-[#FFF] lg:bg-white rounded-3xl border-2 m-4 lg:m-0"
-          >
-            <div class="pt-8">
-              <section class="flex justify-center">
-                <img src="~/assets/img/bi_truck.png" alt="" />
-              </section>
-              <section class="flex justify-center">
-                <p>Enterprise</p>
-              </section>
-              <section class="pt-4 lg:h-[450px]">
                 <section class="flex justify-center">
-                  <p class="m-0 text-5xl font-[600] leading-none">$7500</p>
-                  <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
+                  <p>{{ price.title }}</p>
                 </section>
-                <section class="pt-6 ps-4 pe-4">
-                  <p class="text-[16px] mb-5">
-                    Perfect for Standard Packages that are just getting started.
-                    It is a long established the fact.
-                  </p>
-                  <section class="lg:h-[225px]">
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Unlimited Support</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Sync data across devices</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Create Multiple Firms</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Check Profit on Invoices</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Keep different rates for each party</p>
-                    </div>
-                    <div class="flex mb-2">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Set multiple pricing for items</p>
-                    </div>
-                    <div class="flex">
-                      <img
-                        class="pe-3"
-                        src="~/assets/img/righticon.png"
-                        alt=""
-                      />
-                      <p>Balance Sheet</p>
-                    </div>
-                  </section>
-                  <section class="pt-4 lg:pt-1">
-                    <p class="border-b-2 border-dark-500 w-3/6 border-black">
-                      +10 More Features
+                <section class="">
+                  <section class="flex justify-center">
+                    <p class="m-0 text-md lg:text-4xl font-[600] leading-none">
+                      ${{ price?.price ?? 0 }}
                     </p>
+                    <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
+                  </section>
+                  <section class="pt-6 ps-4 pe-4">
+                    <p class="text-[16px] mb-5">
+                      {{ price?.description ?? " " }}
+                    </p>
+                    <section class="" v-for="option in price.options">
+                      <div class="flex justify-start item-center mb-2">
+                        <img
+                          class="h-[26px] w-[26px]"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p class="ps-2">{{ option ?? "" }}</p>
+                      </div>
+                    </section>
+                    <section class="py-12" v-if="price == 2">
+                      <p class="border-b-2 border-white w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
+                    <section class="py-12" v-else>
+                      <p class="border-b-2 border-dark-500 w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
                   </section>
                 </section>
-              </section>
-              <section
-                class="flex justify-center lg:mt-0 lg:h-[56px] pt-6 lg:pt-0"
-              >
-                <button
-                  class="w-[311px] px-10 py-4 lg:py-0 lg:w-[296px] border-2 rounded-lg text-[#646BEE] font-600"
-                >
-                  Choose Plan
-                </button>
-              </section>
-            </div>
-          </section>
+                <section class="flex justify-center">
+                  <button
+                    class="border px-24 py-4 rounded-lg text-[#646BEE]"
+                    :class="price.textColor"
+                  >
+                    Choose Plan
+                  </button>
+                </section>
+              </div>
+            </section>
+          </div>
         </section>
         <!-- price section end-->
       </section>
-
     </section>
     <!-- body price section end -->
   </div>
@@ -491,66 +257,67 @@
   </div>
 </template>
 
-
 <script setup>
-const prices = [
-  {
-    id: 1,
-    title: "Lite",
-    priceMonth: 2500,
-    priceYear: 4500,
-    description:
-      "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
-    options: [
-      "Unlimited Support",
-      "Sync data across devices",
-      "Create Multiple Firms",
-      "Check Profit on Invoices",
-      "Keep different rates for each party",
-      "Set multiple pricing for items",
-      "Balance Sheet",
-    ],
-    image: "",
-    color: "bg-[#FFF]",
-  },
-  {
-    id: 2,
-    title: "Plus",
-    priceMonth: 4500,
-    priceYear: 4500,
-    description:
-      "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
-    options: [
-      "Unlimited Support",
-      "Sync data across devices",
-      "Create Multiple Firms",
-      "Check Profit on Invoices",
-      "Keep different rates for each party",
-      "Set multiple pricing for items",
-      "Balance Sheet",
-    ],
-    image: "",
-    color: "bg-[#646BEE]",
-    textColor: "text-white",
-  },
-  {
-    id: 3,
-    title: "Enterprise",
-    priceMonth: 7500,
-    priceYear: 4500,
-    description:
-      "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
-    options: [
-      "Unlimited Support",
-      "Sync data across devices",
-      "Create Multiple Firms",
-      "Check Profit on Invoices",
-      "Keep different rates for each party",
-      "Set multiple pricing for items",
-      "Balance Sheet",
-    ],
-    image: "",
-    color: "bg-[#FFF]",
-  },
-];
+import { prices } from "./pricedata";
+const priceData = [...prices];
+let pricesData = [];
+//   {
+//     id: 1,
+//     title: "Lite",
+//     price: 2500,
+//     priceYear: 4500,
+//     description:
+//       "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
+//     options: [
+//       "Unlimited Support",
+//       "Sync data across devices",
+//       "Create Multiple Firms",
+//       "Check Profit on Invoices",
+//       "Keep different rates for each party",
+//       "Set multiple pricing for items",
+//       "Balance Sheet",
+//     ],
+//     image: "~/assets/img/carlight.png",
+//     color: "bg-[#FFF]",
+//   },
+//   {
+//     id: 2,
+//     title: "Plus",
+//     price: 4500,
+//     priceYear: 4500,
+//     description:
+//       "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
+//     options: [
+//       "Unlimited Support",
+//       "Sync data across devices",
+//       "Create Multiple Firms",
+//       "Check Profit on Invoices",
+//       "Keep different rates for each party",
+//       "Set multiple pricing for items",
+//       "Balance Sheet",
+//     ],
+//     image: "",
+//     color: "bg-[#646BEE]",
+//     textColor: "text-white",
+//   },
+//   {
+//     id: 3,
+//     title: "Enterprise",
+//     price: 7500,
+//     priceYear: 4500,
+//     description:
+//       "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
+//     options: [
+//       "Unlimited Support",
+//       "Sync data across devices",
+//       "Create Multiple Firms",
+//       "Check Profit on Invoices",
+//       "Keep different rates for each party",
+//       "Set multiple pricing for items",
+//       "Balance Sheet",
+//     ],
+//     image: "",
+//     color: "bg-[#FFF]",
+//   },
+// ];
 </script>
