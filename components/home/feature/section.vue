@@ -17,7 +17,7 @@
                 <div class="w-12/12 ">
                     <div class="flex justify-center lg:justify-center py-12">
                         <img class="lg:hidden" src="~/assets/img/feature-section.png" alt="">
-                        <img class="hidden lg:block w-[639px] h-[509px]" src="~/assets/img/feature-section-pc.png" alt="">
+                        <img class="hidden lg:block px-6" src="~/assets/img/feature-section-pc.png" alt="">
                     </div>
                 </div>
             </div>
