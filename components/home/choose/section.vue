@@ -51,8 +51,8 @@
         </div>
     </section>
     <!-- for phone -->
-    <section class=" h-[850px] lg:hidden bg-[#FDFCFD]">
-        <div class="pt-2">
+    <section class="lg:hidden bg-[#FDFCFD]">
+        <div class="">
             <div class="flex justify-center">
                 <div class="w-[343px]">
                     <p class="text-[24px] font-[700] text-center">Why Choose Autoofix?</p>
@@ -66,7 +66,7 @@
             <div class="flex justify-center pt-8">
                 <img src="~/assets/img/autofixmobile.png" alt="">
             </div>
-            <div class="pt-10 ps-8">
+            <div class="py-12 px-12">
                 <div class="grid grid-cols-1">
                     <div class="pb-4">
                         <div class="flex items-center">

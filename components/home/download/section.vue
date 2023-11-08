@@ -5,15 +5,15 @@
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <!-- download left section -->
         <div
-          class="download-content-section h-[688px] lg:h-full flex justify-center items-center text-black bg-[url('~/assets/img/downloadAppImageLeftSide.png')] relative"
+          class=" px-12 py-16 download-content-section flex justify-center items-center lg:justify-end text-black bg-[url('~/assets/img/downloadAppImageLeftSide.png')] relative"
         >
-          <div class="h-[484px] w-[90%] lg:w-[70%]">
-            <div class="">
+          <div class="w-[100%] lg:w-[90%]">
+            <div class="text-center lg:text-left">
               <p class="text-5xl font-bold">Download the App</p>
               <br />
               <p class="text-5xl font-bold">Today and Get Started!</p>
             </div>
-            <div class="mt-5 mb-10">
+            <div class="mt-5 mb-10 text-center lg:text-left">
               <p class="text-lg">
                 Fully automated Garage Management System(GMS) is a cloud-based
                 mobile and responsive web application for garage management with
@@ -33,17 +33,17 @@
               </button>
             </div>
             <!-- downloaded info section -->
-            <div class="flex w-100 pt-10 lg:mt-20 text-center">
-              <div class="border-r-2 pe-10">
-                <p class="text-[28px] lg:text-5xl font-semibold">12.6K</p>
+            <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 w-100 text-center pt-12 w-full">
+              <div class="border-r-2 pe-12">
+                <p class="text-[28px] lg:text-[2.5rem] font-semibold">12.6K</p>
                 <p>Downloads</p>
               </div>
-              <div class="border-r-2 pe-10 ps-10">
-                <p class="text-[28px] lg:text-5xl font-semibold">9.5K</p>
+              <div class="border-r-2 px-12">
+                <p class="text-[28px] lg:text-[2.5rem] font-semibold">9.5K</p>
                 <p>Happy Clients</p>
               </div>
-              <div class="ps-10">
-                <p class="text-[28px] lg:text-5xl font-semibold">1.4K</p>
+              <div class="px-12">
+                <p class="text-[28px] lg:text-[2.5rem] font-semibold">1.4K</p>
                 <p>App Rated</p>
               </div>
             </div>
@@ -56,7 +56,7 @@
         </div>
         <!-- download right section -->
         <div
-          class="pt-14 download-image-section flex items-end justify-end bg-[url('~/assets/img/downloadAppImageBG')]"
+          class="pt-14 ps-8 download-image-section flex items-end justify-end bg-[url('~/assets/img/downloadAppImageBG')]"
         >
           <div class="relative">
             <img
