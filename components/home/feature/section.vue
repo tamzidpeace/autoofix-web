@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[#FFF] px-4">
+    <section class="bg-[#FFF] px-1">
         <section class="py-14">
             <div class="flex justify-center">
                 <p class="font-bold text-[24px]">Our Features</p>
