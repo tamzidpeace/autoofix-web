@@ -314,11 +314,17 @@ let pricesData = [];
 
 const perMonthPrice = () => {
   selectedPrice.value = "month";
-  console.log("permonthPrice");
+  priceData.value = [...prices];
 };
+
 const perYearPrice = () => {
   selectedPrice.value = "year";
-  console.log("perYearPrice");
+  let pricePerYear = [];
+  priceData.value.map((price) => {
+    let priceObject = { ...price, price: price.price * 10 };
+    pricePerYear.push(priceObject);
+  });
+  priceData.value = pricePerYear;
 };
 //   {
 //     id: 1,
