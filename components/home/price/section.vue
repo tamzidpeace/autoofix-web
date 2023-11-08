@@ -1,9 +1,9 @@
 <template>
   <div>
-    <ContentRendererMarkdown :value="data" :data="mdcVars" />
+    <!-- <ContentRendererMarkdown :value="data" :data="mdcVars" />
     <button type="button" v-on:click="mdcVars.name = 'Hugo'">
       Change name btn
-    </button>
+    </button> -->
   </div>
 
   <div class="hidden lg:block">
@@ -496,11 +496,11 @@
   </div>
 </template>
 <script setup>
-const contentQuery = queryContent("prices", "1.lite");
+// const contentQuery = queryContent("prices", "1.lite");
 
-const { data } = await useAsyncData(() => queryContent("prices"));
-console.log("contentQuery", contentQuery);
-console.log("data", data);
+// const { data } = await useAsyncData(() => queryContent("prices"));
+// console.log("contentQuery", contentQuery);
+// console.log("data", data);
 // const mdcVars = ref({ name: "Maxime" });
 
 // defineProps({
