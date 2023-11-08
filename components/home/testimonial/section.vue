@@ -25,7 +25,7 @@ import {testimonials} from "./data.js";
                 :key="index"
                 :virtualIndex="index"
             >
-<!--              <div
+              <div
                   class="h-[540px] bg-[#FAF9FF] w-[745px] rounded-2xl flex justify-center border-2 border-sky-800"
               >
                 <div class="relative p-4 h-full w-5/6 pt-12">
@@ -51,7 +51,7 @@ import {testimonials} from "./data.js";
                     </div>
                   </div>
                 </div>
-              </div>-->
+              </div>
             </SwiperSlide
             >
           </Swiper>
