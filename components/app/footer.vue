@@ -14,37 +14,43 @@ const supportLinks = [
   { id: 4, text: "Privacy Policy", url: "#" },
 ];
 let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[4px] h-[40px]';
-
 </script>
 
 <template>
   <div class="image-container px-[1rem] py-[16px] text-white relative 3xl:px-[16.25rem] 3xl:py-[3.75px] xl:px-[10rem] xl:pt-[94px] lg:px-[4rem] " >
-    <div class="lg:grid lg:grid-cols-12 lg:gap-8 mb-[40px]">
-      <div class="col-span-4">
-        <img :src="Logo" alt="" class="mb-6">
+    <div class="lg:grid lg:grid-cols-3 lg:gap-8 lg:mt-0 lg:mb-[40px] mb-4">
+      <div class="col-span-1">
+        <img :src="Logo" alt="" class="lg:mb-6">
         <div class="flex flex-col">
           <p>Join our subscribers list to get instant latest news and special offers</p>
-          <input type="email" class="text-gray-600" placeholder="Your Email" >
+          <div class="flex">
+            <input type="email" class="text-gray-700 z-20 border-none" placeholder="Your Email" >
+            <button class="bg-[#F79009] flex rounded items-center px-2">Subscribe
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 5.99854V7.99854H14.59L5 17.5885L6.41 18.9985L16 9.40854V17.9985H18V5.99854H6Z" fill="white"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="col-span-4 grid grid-cols-2">
+      <div class="col-span-1 grid grid-cols-2">
         <div class="flex flex-col">
-          <h1 class="text-2xl mb-6 font-bold">Useful Link</h1>
+          <h1 class="lg:text-2xl text-base lg:mb-6 font-bold">Useful Link</h1>
         <span v-for="link in usefulLinks">
-          <a :key="link.id" :href="link.url" class="mb-3">{{ link.text }}</a>
+          <a :key="link.id" :href="link.url" class="mb-3 lg:text-base text-xs">{{ link.text }}</a>
         </span>
         </div>
         <div class="flex flex-col">
-          <h1 class="text-2xl mb-6 font-bold">Support</h1>
+          <h1 class="lg:text-2xl text-base lg:mb-6 font-bold">Support</h1>
           <span v-for="link in supportLinks">
-            <a :key="link.id" :href="link.url" class="mb-3">{{ link.text }}</a>
+            <a :key="link.id" :href="link.url" class="mb-3 lg:text-base text-xs">{{ link.text }}</a>
           </span>
         </div>
       </div>
-      <div class="col-span-4">
-        <h1 class="text-2xl mb-6 font-bold">Get In Touch</h1>
-        <p class="mb-3">23, Tropical Akhand Tower (Level: 03-04), Garib-e-Newaz Avenue, Sector: 11, Uttara, Dhaka - 1230</p>
-        <a class="mb-3">Email: info@garazino.com</a>
+      <div class="col-span-1">
+        <h1 class="lg:text-2xl lg:mb-6 text-base font-bold">Get In Touch</h1>
+        <p class="lg:mb-3 lg:text-base text-xs">23, Tropical Akhand Tower (Level: 03-04), Garib-e-Newaz Avenue, Sector: 11, Uttara, Dhaka - 1230</p>
+        <a class="lg:mb-3 lg:text-base text-xs">Email: info@garazino.com</a>
         <div class="flex space-x-4">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.0669 28.9985C22.1394 28.9985 28.7444 18.9941 28.7444 10.321C28.7444 10.0398 28.7381 9.75227 28.7256 9.47102C30.0105 8.54182 31.1193 7.39087 32 6.07227C30.8034 6.60467 29.5329 6.95238 28.2319 7.10352C29.6017 6.28241 30.6274 4.9925 31.1187 3.47289C29.8301 4.23661 28.4208 4.77535 26.9513 5.06602C25.9611 4.01395 24.652 3.31736 23.2262 3.08394C21.8005 2.85052 20.3376 3.09327 19.0637 3.77466C17.7897 4.45606 16.7757 5.53814 16.1785 6.85362C15.5812 8.16909 15.4339 9.64469 15.7594 11.0523C13.15 10.9213 10.5972 10.2435 8.26664 9.06267C5.93604 7.88186 3.87959 6.22445 2.23062 4.19789C1.39253 5.64286 1.13608 7.35273 1.51337 8.97999C1.89067 10.6073 2.87342 12.0298 4.26188 12.9585C3.2195 12.9254 2.19997 12.6448 1.2875 12.1398V12.221C1.28657 13.7374 1.8108 15.2073 2.77108 16.3809C3.73136 17.5545 5.06843 18.3593 6.555 18.6585C5.58941 18.9227 4.57598 18.9612 3.59313 18.771C4.01261 20.0751 4.82876 21.2157 5.92769 22.0336C7.02662 22.8516 8.35349 23.306 9.72313 23.3335C7.3979 25.16 4.52557 26.1507 1.56875 26.146C1.04438 26.1452 0.520532 26.1131 0 26.0498C3.00381 27.9769 6.49804 29.0004 10.0669 28.9985Z" fill="white"/>
@@ -104,34 +110,37 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
         </div>
       </div>
     </div>
-    <div class="flex justify-between px-9 items-center">
-      <p class="">Copyright © 2023 Softzino Technologies</p>
-      <div class="  lg:block hidden">
-      <div class="flex space-x-6">
-        <button :class="buttonClass">
-          <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.15639 0.965197C1.03827 1.2327 0.973022 1.56046 0.973022 1.94172V24.0577C0.973022 24.4398 1.03835 24.7676 1.15661 25.035L13.1905 12.9993L1.15639 0.965197ZM1.85161 25.7542C2.29766 25.9451 2.87953 25.8845 3.51402 25.5247L17.6711 17.4799L13.8976 13.7065L1.85161 25.7542ZM18.5736 16.9682L23.015 14.4447C24.412 13.6497 24.412 12.3507 23.015 11.5567L18.5716 9.03184L14.6047 12.9993L18.5736 16.9682ZM17.6698 8.51943L3.51402 0.475724C2.87949 0.115146 2.29759 0.054983 1.85153 0.246121L13.8976 12.2922L17.6698 8.51943Z" fill="white"/>
-          </svg>
+    <div class="z-10">
+       <img :src="TireImg" alt="" class="absolute 3xl:left-[80px] left-[40px] lg:block hidden bottom-0 z-10">
+         <div class="absolute bottom-[90px] right-[220px] left-[220px]">
+           <hr class="h-px bg-white w-full border-1 lg:block hidden">
+         </div>
+        <img :src="TireImg" alt="" class="absolute 3xl:right-[80px] lg:block hidden right-[40px] bottom-0 z-10">
+     </div>
+    <hr class="h-px bg-white w-full border-1 lg:hidden">
+    <div class="flex justify-between lg:px-[5.5rem] items-center">
+      <p class="lg:text-base text-xs">Copyright © 2023 Softzino Technologies</p>
+      <div class="lg:block hidden">
+        <div class="flex space-x-6">
+          <button :class="buttonClass">
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.15639 0.965197C1.03827 1.2327 0.973022 1.56046 0.973022 1.94172V24.0577C0.973022 24.4398 1.03835 24.7676 1.15661 25.035L13.1905 12.9993L1.15639 0.965197ZM1.85161 25.7542C2.29766 25.9451 2.87953 25.8845 3.51402 25.5247L17.6711 17.4799L13.8976 13.7065L1.85161 25.7542ZM18.5736 16.9682L23.015 14.4447C24.412 13.6497 24.412 12.3507 23.015 11.5567L18.5716 9.03184L14.6047 12.9993L18.5736 16.9682ZM17.6698 8.51943L3.51402 0.475724C2.87949 0.115146 2.29759 0.054983 1.85153 0.246121L13.8976 12.2922L17.6698 8.51943Z" fill="white"/>
+            </svg>
             <span class="flex flex-col items-start"><span class="text-[8px]">GET IT ON</span>
             <span class="text-md font-bold">Google Play</span></span>
-        </button>
-        <button :class="buttonClass">
-          <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.769 12.2991C15.7907 10.6181 16.6934 9.02751 18.1256 8.14705C17.2221 6.85673 15.7088 6.03863 14.1344 5.98937C12.4552 5.81311 10.8272 6.9942 9.97149 6.9942C9.09922 6.9942 7.78172 6.00687 6.36299 6.03606C4.51374 6.0958 2.78977 7.14719 1.89007 8.76393C-0.0439277 12.1123 1.39866 17.0334 3.25127 19.74C4.17817 21.0654 5.26145 22.5458 6.6789 22.4933C8.06596 22.4358 8.584 21.6088 10.2583 21.6088C11.9171 21.6088 12.4031 22.4933 13.8493 22.4599C15.3377 22.4358 16.2754 21.1287 17.1698 19.7908C17.8358 18.8464 18.3483 17.8027 18.6882 16.6983C16.9391 15.9585 15.771 14.1982 15.769 12.2991Z" fill="white"/>
-            <path d="M13.0373 4.20937C13.8489 3.23516 14.2487 1.98298 14.1518 0.71875C12.912 0.84897 11.7668 1.44153 10.9443 2.37836C10.14 3.29369 9.72143 4.52384 9.80056 5.73975C11.0408 5.75252 12.2601 5.17602 13.0373 4.20937Z" fill="white"/>
-          </svg>
-          <span class="flex flex-col items-start">
+          </button>
+          <button :class="buttonClass">
+            <svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.769 12.2991C15.7907 10.6181 16.6934 9.02751 18.1256 8.14705C17.2221 6.85673 15.7088 6.03863 14.1344 5.98937C12.4552 5.81311 10.8272 6.9942 9.97149 6.9942C9.09922 6.9942 7.78172 6.00687 6.36299 6.03606C4.51374 6.0958 2.78977 7.14719 1.89007 8.76393C-0.0439277 12.1123 1.39866 17.0334 3.25127 19.74C4.17817 21.0654 5.26145 22.5458 6.6789 22.4933C8.06596 22.4358 8.584 21.6088 10.2583 21.6088C11.9171 21.6088 12.4031 22.4933 13.8493 22.4599C15.3377 22.4358 16.2754 21.1287 17.1698 19.7908C17.8358 18.8464 18.3483 17.8027 18.6882 16.6983C16.9391 15.9585 15.771 14.1982 15.769 12.2991Z" fill="white"/>
+              <path d="M13.0373 4.20937C13.8489 3.23516 14.2487 1.98298 14.1518 0.71875C12.912 0.84897 11.7668 1.44153 10.9443 2.37836C10.14 3.29369 9.72143 4.52384 9.80056 5.73975C11.0408 5.75252 12.2601 5.17602 13.0373 4.20937Z" fill="white"/>
+            </svg>
+            <span class="flex flex-col items-start">
             <span class="text-[8px]">Download on the </span>
             <span class="text-md font-bold">App Store</span>
           </span>
-        </button>
+          </button>
+        </div>
       </div>
-    </div>
-    </div>
-    <div class="flex justify-between">
-      <img :src="TireImg" alt="" class="absolute 3xl:left-[80px] left-[40px] lg:block hidden bottom-0 z-10">
-      <hr class="h-px bg-white border-1 w-full dark:bg-gray-700 lg:block hidden mt-[-70px]">
-      <img :src="TireImg" alt="" class="absolute 3xl:right-[80px] lg:block hidden right-[40px] bottom-0 z-10">
     </div>
   </div>
 </template>
@@ -140,7 +149,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
 .image-container {
   background-image: url('/assets/img/footer/Group 1000010443.png');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: round;
   width: 100%;
   height: 100%;
 }
