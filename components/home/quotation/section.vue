@@ -1,8 +1,8 @@
 <template>
     <!-- for web -->
-    <section class="hidden lg:block h-[682px] bg-[#F5F6F6]">
-        <div class="grid grid-cols-2 h-full">
-            <div class="flex items-center justify-end ">
+    <section class="hidden lg:block bg-[#F5F6F6]">
+        <div class="grid grid-cols-2 py-12">
+            <div class="flex items-center justify-end px-12">
                 <div class="w-[685px]">
                     <div class="">
                         <p class="text-[36px] font-[700]">Build Professional Price Quotation.</p>
@@ -12,19 +12,19 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center px-4">
                 <img src="~/assets/img/quatation.png" alt="">
             </div>
         </div>
     </section>
     <!-- for phone -->
-    <section class=" h-[700px] lg:hidden bg-[#F6F8FF]">
+    <section class="lg:hidden bg-[#F6F8FF]">
         <div class="">
             <div class="flex justify-center ">
                 <img src="~/assets/img/quatation.png" alt="">
             </div>
-            <div class="flex justify-start">
-                <div class="w-[343px] ps-8">
+            <div class="flex justify-start py-12">
+                <div class="px-12">
                     <p class="text-[24px] font-[700] text-start">Build Professional Price Quotation.</p>
                     <p class="text-start">Free quotation maker - create quotation & estimate online with quotation
                         templates. Send email &
