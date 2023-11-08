@@ -1,15 +1,15 @@
 <template>
     <!-- for web -->
-    <section class="hidden lg:block h-[723px] bg-[#F5F7FA]">
-        <div class="grid grid-cols-2 h-full">
-            <div class="flex items-center justify-end ">
+    <section class="hidden lg:block bg-[#F5F7FA] py-8">
+        <div class="grid grid-cols-2">
+            <div class="flex items-center justify-end px-8 py-12">
                 <div class="w-[685px]">
                     <div class="">
                         <p class="text-[36px] font-[700]">Products</p>
                         <p>As suggested by the name, wholesale auto spare parts are units that automobile owners can use as
                             replacements to exchange for a dysfunctional piece of their</p>
                     </div>
-                    <div class="pt-10">
+                    <div class="">
                         <div class="grid grid-cols-2">
                             <div class="">
                                 <div class="flex items-center">
@@ -43,13 +43,13 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center p-16">
                 <img src="~/assets/img/product-section.png" alt="">
             </div>
         </div>
     </section>
     <!-- for phone -->
-    <section class=" h-[980px] lg:hidden bg-[#F5F7FA]">
+    <section class="lg:hidden bg-[#F5F7FA]">
         <div class="pt-12">
             <div class="flex justify-center">
                 <div class="w-[343px]">
@@ -64,7 +64,7 @@
                 <img src="~/assets/img/product-mobile-iamge.png" alt="">
             </div>
             <div>
-                <div class="grid grid-cols-1 p-6 pt-10">
+                <div class="grid grid-cols-1 py-12 px-12">
                     <div class="">
                         <div class="flex items-center">
                             <img class="w-[40px]" src="~/assets/img/p-chesis.png" alt="">

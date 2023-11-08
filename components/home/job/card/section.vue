@@ -1,7 +1,7 @@
 <template>
     <!-- for web -->
-    <section class="hidden lg:block h-[808px] bg-[#FFF]">
-        <div class="grid grid-cols-2 h-full">
+    <section class="hidden lg:block bg-[#FFF]">
+        <div class="grid grid-cols-2 py-32 px-12">
             <div class="flex items-center justify-center">
                 <img src="~/assets/img/job-section-pc-image.png" alt="">
             </div>
@@ -34,11 +34,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <!-- for phone -->
-    <section class=" h-[900px] lg:hidden bg-[#FFF]">
+    <section class="py-12 lg:hidden bg-[#FFF]">
         <div class="pt-12">
             <div class="flex justify-center">
                 <div class="w-[343px]">
@@ -52,7 +51,7 @@
                 <img src="~/assets/img/job-section-mobile-image.png" alt="">
             </div>
             <div>
-                <div class="grid grid-cols-1 p-6 pt-10">
+                <div class="grid grid-cols-1 pt-10 px-12">
                     <div class="">
                         <div class="flex items-center">
                             <img class="w-[40px]" src="~/assets/img/jicon-1.png" alt="">

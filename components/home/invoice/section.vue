@@ -1,11 +1,11 @@
 <template>
     <!-- for web -->
-    <section class="hidden lg:block h-[808px] bg-[#FFF]">
-        <div class="grid grid-cols-2 h-full">
-            <div class="flex items-center justify-center">
+    <section class="hidden lg:block py-32 bg-[#FFF]">
+        <div class="grid grid-cols-2 h-full px-12">
+            <div class="flex items-center justify-center px-4">
                 <img src="~/assets/img/gipc.png" alt="">
             </div>
-            <div class="flex items-center justify-start ">
+            <div class="flex items-center justify-center px-4">
                 <div class="w-[685px]">
                     <div class="">
                         <p class="text-[36px] font-[700]">Generate Invoice</p>
@@ -38,8 +38,8 @@
         </div>
     </section>
     <!-- for phone -->
-    <section class=" h-[800px] lg:hidden bg-[#FFF]">
-        <div class="pt-12">
+    <section class="lg:hidden bg-[#FFF]">
+        <div class="py-24">
             <div class="flex justify-center">
                 <div class="w-[343px]">
                     <p class="text-[24px] font-[700] text-center">Generate Invoice</p>
@@ -53,7 +53,7 @@
                 <img src="~/assets/img/gimobile.png" alt="">
             </div>
             <div>
-                <div class="grid grid-cols-1 p-6 pt-10">
+                <div class="grid grid-cols-1 px-12 py-12">
                     <div class="">
                         <div class="flex items-center">
                             <img class="w-[40px]" src="~/assets/img/giicon1.png" alt="">
