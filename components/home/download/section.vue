@@ -56,7 +56,7 @@
         </div>
         <!-- download right section -->
         <div
-          class="pt-14 ps-8 download-image-section flex items-end justify-end bg-[url('~/assets/img/downloadAppImageBG')]"
+          class="pt-14 ps-8 download-image-section flex items-end justify-end"
         >
           <div class="relative">
             <img
