@@ -33,7 +33,7 @@ const previousPage = () => {
             <div class="">
               <h1 class="lg:text-4xl text-2xl font-bold mb-4">{{ blog.title }}</h1>
               <div class="font-normal text-base mb-6">
-                <div class="float-right w-[50%]">
+                <div class="float-right m-2 w-[50%]">
                   <div class="mb-3">
                     <img :src="blog.image" alt="" class="rounded-[8px]">
                   </div>
