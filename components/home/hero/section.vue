@@ -104,5 +104,9 @@
       </section> -->
       <!-- icon-car place in middle of the screen end-->
     </section>
+    <!-- white car position -->
+    <div class="hidden lg:block absolute -top-[-62%] left-[50%]">
+      <img src="~/assets/img/dashboardcariconwhite.png" alt="">
+    </div>
   </section>
 </template>
