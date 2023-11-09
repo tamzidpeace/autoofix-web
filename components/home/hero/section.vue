@@ -1,12 +1,12 @@
 <template>
   <!-- body hero section mobile & web start-->
-  <section class="bg-[#646bee] w-full relative">
+  <section class="bg-purple-1 3xl:pl-[16.25rem] 3xl:pr-[5.2rem] 3xl:pt-[6.3rem] xl:px-[10rem] lg:px-[3rem] lg:py-[4rem] px-[1rem] py-[2.75rem] relative">
     <section
-      class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 px-8"
+      class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 px-4"
     >
       <!-- left-side-section start -->
       <section
-        class="flex items-center justify-center"
+        class="flex items-center justify-center lg:py-[9.8rem]"
       >
         <section class="">
           <section class="relative">
@@ -22,18 +22,18 @@
             </section>
             <section class="z-10 relative ">
               <p
-                class="text-white font-[800] pt-10 text-[24px] text-center lg:text-left lg:text-[64px] w-full"
+                class="text-white font-bold mb-2 text-[24px] text-center lg:text-left lg:text-[3rem]  2xl:text-[4rem] w-full"
               >
                 Best Application for Your Business & Solution.
               </p>
               <p
-                class="text-white text-[16px] font-[400] ps-4 pt-4 pb-4 lg:text-[24px] lg:mb-10"
+                class="text-white text-sm font-normal lg:text-2xl mb-4 text-center lg:text-left"
               >
                 Autoofix is the best software platform for running garage
                 business.
               </p>
 
-              <section class="flex justify-center lg:mt-5 relative">
+              <section class="flex relative">
                 <button class="hidden lg:block">
                   <img
                     src="~/assets/img/pc-version-hero-section-btn (1).png"
