@@ -33,7 +33,7 @@
           <div class="h-full flex justify-start lg:justify-center">
             <div class="px-12 py-12">
               <div class="">
-                <p class="font-bold text-[24px]">{{ feature.serviceName }}</p>
+                <p class="font-bold text-[24px]">{{ feature.featureName }}</p>
               </div>
               <div class="">
                 <p class="font-400 pt-2">
