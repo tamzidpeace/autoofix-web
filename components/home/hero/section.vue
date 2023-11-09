@@ -36,7 +36,6 @@ let buttonClass = 'flex items-center text-white space-x-4 rounded-[4px] h-[56px]
                 Autoofix is the best software platform for running garage
                 business.
               </p>
-
               <section class="hidden lg:flex relative">
                   <button class="border border-white p-3" :class="buttonClass">
                     <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">

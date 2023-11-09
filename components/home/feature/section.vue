@@ -8,7 +8,7 @@
               </div>
               <div class="text-center flex justify-center">
                   <p class="font-normal">
-                    {{ feature.descriptionTop }}<
+                    {{ feature.descriptionTop }}
                   </p>
               </div>
           </section>
