@@ -17,7 +17,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
 </script>
 
 <template>
-  <div class="image-container px-[1rem] py-[16px] text-white relative 3xl:px-[16.25rem] 3xl:py-[3.75px] xl:px-[10rem] xl:pt-[94px] lg:px-[4rem] " >
+  <div class="image-container px-[1rem] py-[16px] text-white relative 3xl:px-[16.25rem] 3xl:py-[3.75px] xl:px-[10rem] xl:pt-[94px] lg:px-[4rem]">
     <div class="lg:grid lg:grid-cols-3 lg:gap-8 lg:mt-0 lg:mb-[40px] mb-4">
       <div class="col-span-1">
         <img :src="Logo" alt="" class="lg:mb-6">
@@ -147,7 +147,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
 
 <style scoped>
 .image-container {
-  background-image: url('/assets/img/footer/Group 1000010443.png');
+  background-image: url('~/assets/img/footer/Group 1000010443.png');
   background-size: cover;
   background-repeat: round;
   width: 100%;

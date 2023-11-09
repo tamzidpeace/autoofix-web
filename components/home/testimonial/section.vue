@@ -1,6 +1,6 @@
 <template class="">
 
-  <div class="border-2 border-sky-900 testimonials-style">
+  <div class="testimonials-style">
     <div class="flex justify-center">
       <div class="w-[343px]">
         <p class="text-[24px] font-[700] text-center">Testimonials</p>

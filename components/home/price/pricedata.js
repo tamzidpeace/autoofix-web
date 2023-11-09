@@ -1,6 +1,6 @@
-import liteImage from '../../../assets/img/carlight.png'
-import plusImage from '../../../assets/img/yellowsmallcar.png'
-import enterPriceImage from '../../../assets/img/bi_truck.png'
+import liteImage from '../../../assets/img/price/Group 20637.svg'
+import plusImage from '../../../assets/img/price/dashicons_car.svg'
+import enterPriceImage from '../../../assets/img/price/Group 20637 (1).svg'
 
 export const prices = [
   {
@@ -22,6 +22,7 @@ export const prices = [
     image: liteImage,
     color: "bg-[#FFF]",
     bgColor : "bg-[#FFF]",
+    border : "border-purple-1",
     // textColor : 'text-[#646BEE]'
   },
   {
@@ -41,9 +42,10 @@ export const prices = [
       "Balance Sheet",
     ],
     image: plusImage,
-    bgColor : "bg-[#646BEE]",
+    bgColor : "bg-purple-1",
     color: "bg-[#646BEE]",
     textColor: "text-white",
+    border : "border-white",
   },
   {
     id: 3,
@@ -64,6 +66,7 @@ export const prices = [
     image: enterPriceImage,
     color: "bg-[#FFF]",
     bgColor : "bg-[#FFF]",
+    border : "border-purple-1",
     // textColor: 'text-[#646BEE]',
   },
 ];

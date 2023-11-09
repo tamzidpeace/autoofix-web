@@ -13,8 +13,8 @@ export default {
     extend: {
       colors: {
         'blue' : {
-          1 : "",
-          2 : "",
+          1 : "#D2D3EA",
+          2 : "#F9F9FF",
         },
         'purple': {
           1 : '#646BEE',
@@ -23,6 +23,8 @@ export default {
         'gray' : {
           1: '#F1F1F1',
           2: '#F0EEFE',
+          3: '#F5F7FA',
+          4: '#F2F2FD',
           5: '#63636B',
           6: '#555555',
           7: '#2B2B2B',

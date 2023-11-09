@@ -1,88 +1,115 @@
 <template>
   <ContentList path="/features" v-slot="{ list }">
-    <div v-for="feature in list" :key="feature._path">
-      <section class="bg-white 3xl:px-[16.25rem] 3xl:py-[7.75rem] xl:px-[10rem] lg:px-[3rem] lg:py-[4rem] px-[1rem] py-[2.75rem]">
-          <section class="mb-[3rem] lg:mx-[14.88rem]">
-              <div class="flex justify-center">
-                  <p class="font-extrabold text-2xl xl:text-4xl">{{ feature.title ?? "Our Features" }}</p>
-              </div>
-              <div class="text-center flex justify-center">
-                  <p class="font-normal">
-                    {{ feature.descriptionTop }}
-                  </p>
-              </div>
-          </section>
-          <section class="grid grid-cols-1 lg:grid-cols-2 ">
-                  <div class="flex justify-center lg:justify-start 2xl:justify-end mb-4">
-                      <img class="lg:hidden" src="~/assets/img/feature-section.png" alt="">
-                      <img class="hidden lg:block px-6" src="~/assets/img/feature-section-pc.png" alt="">
+      <div v-for="feature in list" :key="feature._path">
+          <section class="bg-white 3xl:px-[16.25rem] 3xl:py-[7.75rem] xl:px-[10rem] md:px-[3rem] lg:py-[4rem] px-[1rem] py-[2.75rem]">
+              <section class="md:mb-[3rem] mb-8 lg:mx-[14.88rem]">
+                  <div class="flex justify-center">
+                      <p class="font-extrabold  text-2xl xl:text-4xl">{{ feature.title ?? "Our Features" }}</p>
                   </div>
-              <div class="h-full flex justify-start 2xl:pl-[76px] lg:justify-center lg:py-[3.5rem]">
-                  <div class="">
-                          <p class="font-bold text-[24px] mb-4 lg:text-4xl">{{ feature.featureName }}</p>
-                          <p class="font-normal text-gray-6 text-base">{{
-                              feature.descriptionDown ??
-                              "Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary, Customer & Vehicle Master, and             More Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary."
-                            }}
-                          </p>
-                      <div class="pt-8">
-                          <div class=" w-full">
-                              <div class="flex items-center">
-                                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24" cy="24" r="24" fill="#646BEE"/>
-                                    <path d="M22.6666 25.3332H14.6666V22.6665H22.6666V14.6665H25.3333V22.6665H33.3333V25.3332H25.3333V33.3332H22.6666V25.3332Z" fill="white"/>
-                                  </svg>
-                                  <p class="font-bold text-2xl ps-4">{{ feature.serviceOne ?? "Vehicle Entries .." }}</p>
+                  <div class="text-center flex justify-center">
+                      <p class="font-normal text-sm md:text-base">
+                        {{ feature.descriptionTop }}
+                      </p>
+                  </div>
+              </section>
+              <section class="grid grid-cols-1 lg:grid-cols-2 ">
+                      <div class="flex justify-center lg:justify-start 2xl:justify-end mb-4">
+                          <img class="lg:hidden" src="~/assets/img/feature-section.png" alt="">
+                          <img class="hidden lg:block px-6" src="~/assets/img/feature-section-pc.png" alt="">
+                      </div>
+                  <div class="h-full flex justify-start 2xl:pl-[76px] lg:justify-center lg:py-[3.5rem]">
+                      <div class="">
+                          <p class="font-bold text-[24px] mb-1 lg:mb-4 lg:text-4xl">{{ feature.featureName }}</p>
+                              <p class="font-normal text-gray-6 text-sm lg:text-base">{{
+                                  feature.descriptionDown ??
+                                  "Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary, Customer & Vehicle Master, and             More Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary."
+                                }}
+                              </p>
+                          <div class="pt-8">
+                              <div class=" w-full mb-4">
+                                  <div class="flex items-center">
+                                      <svg class="hidden lg:block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="24" cy="24" r="24" fill="#646BEE"/>
+                                        <path d="M22.6666 25.3332H14.6666V22.6665H22.6666V14.6665H25.3333V22.6665H33.3333V25.3332H25.3333V33.3332H22.6666V25.3332Z" fill="white"/>
+                                      </svg>
+                                      <svg class="lg:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12.1626" r="12" fill="#646BEE"/>
+                                        <path d="M11.3335 12.8294H7.33345V11.4961H11.3335V7.49609H12.6668V11.4961H16.6668V12.8294H12.6668V16.8294H11.3335V12.8294Z" fill="white"/>
+                                      </svg>
+                                    <p class="font-medium text-base lg:font-bold lg:text-2xl ps-4">{{ feature.serviceOne ?? "Vehicle Entries .." }}</p>
+                                  </div>
+                                  <p class="ps-10 lg:ps-16 text-gray-6 text-xs lg:text-base  pe-2">
+                                    {{
+                                      feature.descriptionOne ??
+                                      " Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary.."
+                                    }}                              </p>
                               </div>
-                              <p class="ps-16 text-gray-6 text-base pe-2">
-                                {{
-                                  feature.descriptionOne ??
-                                  " Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary.."
-                                }}                              </p>
-                          </div>
-                          <div class="">
-                              <div class="flex items-center">
-                                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <circle cx="24" cy="24" r="24" fill="#374DA8"/>
-                                      <g clip-path="url(#clip0_510_410)">
-                                        <path d="M23.3159 12.9844L22.6025 14.6133C22.2332 14.6358 21.8657 14.6823 21.5025 14.7525L20.4111 13.3432L19.2348 13.7432L19.229 15.5362C18.7307 15.7923 18.2532 16.1019 17.8021 16.4633L16.1397 15.7148L15.2886 16.6201L16.1396 18.2344C15.8681 18.6215 15.6295 19.0306 15.4263 19.4575L13.6011 19.5073L13.2305 20.6923L14.7041 21.7778C14.6336 22.2175 14.5991 22.6618 14.5972 23.1065L12.9609 23.9355L13.1323 25.166L14.9282 25.5176C15.0356 25.8935 15.1687 26.2615 15.3267 26.6191L14.1431 28.0884L14.8037 29.1401L16.6436 28.7095C16.76 28.8465 16.8807 28.9798 17.0054 29.1093C17.2658 29.3787 17.5433 29.6312 17.836 29.8652L17.4786 31.708L18.5538 32.3291L19.9585 31.1059C20.3605 31.2675 20.7743 31.3977 21.1964 31.4955L21.6549 33.2958L22.8926 33.3969L23.6368 31.6991C24.151 31.6682 24.6635 31.5913 25.1675 31.4677L26.3497 32.8373L27.5025 32.3759L27.4688 31.6815L24.7778 29.6411C23.9945 29.8391 23.1821 29.8921 22.3843 29.8021C20.8958 29.6343 19.4654 28.9621 18.3428 27.8012C15.777 25.1475 15.8503 20.9261 18.504 18.3603C19.7893 17.1175 21.4425 16.4871 23.0977 16.4692C24.8597 16.4502 26.6234 17.1253 27.9464 18.4936C30.0996 20.7207 30.393 24.071 28.8633 26.6074L30.3619 27.7441C30.5482 27.452 30.7165 27.1487 30.8658 26.8359L32.6778 26.7861L33.0484 25.6011L31.5851 24.523C31.6557 24.0797 31.6914 23.6315 31.692 23.1826L33.318 22.3565L33.1466 21.126L31.3522 20.7744C31.2013 20.2547 31.0011 19.7504 30.7546 19.2686L31.8238 17.7876L31.109 16.7724L29.3483 17.2837C29.3262 17.2602 29.3048 17.2365 29.2823 17.2133C29.0052 16.9266 28.7086 16.6593 28.3947 16.4135L28.7316 14.6732L27.6562 14.0522L26.3203 15.2153C25.8878 15.0413 25.4437 14.9058 24.9931 14.8052L24.5552 13.0854L23.3159 12.9844ZM20.5898 20.1797C20.105 20.1852 19.6244 20.3043 19.1836 20.5209L21.3033 22.1294C21.9443 22.6158 22.1262 23.5401 21.6342 24.189C21.1421 24.8382 20.1972 24.9358 19.5469 24.4425L17.4287 22.8355C17.2118 23.9977 17.6225 25.2291 18.6284 25.9922C19.5305 26.6765 20.6883 26.8046 21.6856 26.4464L21.9097 26.3657L22.0986 26.5093L28.4356 31.317L28.6245 31.4605L28.6084 31.6979C28.5316 32.7549 28.9642 33.8358 29.8667 34.5205C30.8726 35.2837 32.1704 35.3469 33.2314 34.8252L31.1133 33.2183C30.4629 32.7249 30.3032 31.7884 30.7955 31.1397C31.2877 30.491 32.2269 30.4176 32.8681 30.9038L34.9863 32.5109C35.2027 31.3491 34.7937 30.1171 33.7881 29.3541C32.8828 28.667 31.7341 28.5309 30.7427 28.8838L30.52 28.9629L30.3311 28.8194L23.9941 24.0118L23.8052 23.8682L23.8213 23.6324C23.894 22.583 23.4533 21.5139 22.5483 20.8272C21.9603 20.3811 21.2723 20.172 20.5899 20.1797L20.5898 20.1797ZM22.6319 24.4102L30.3135 30.2388L29.7847 30.9375L22.1016 25.1074L22.6319 24.4102Z" fill="white"/>
+                              <div class="mb-4">
+                                  <div class="flex items-center">
+                                      <svg class="hidden lg:block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <circle cx="24" cy="24" r="24" fill="#374DA8"/>
+                                          <g clip-path="url(#clip0_510_410)">
+                                            <path d="M23.3159 12.9844L22.6025 14.6133C22.2332 14.6358 21.8657 14.6823 21.5025 14.7525L20.4111 13.3432L19.2348 13.7432L19.229 15.5362C18.7307 15.7923 18.2532 16.1019 17.8021 16.4633L16.1397 15.7148L15.2886 16.6201L16.1396 18.2344C15.8681 18.6215 15.6295 19.0306 15.4263 19.4575L13.6011 19.5073L13.2305 20.6923L14.7041 21.7778C14.6336 22.2175 14.5991 22.6618 14.5972 23.1065L12.9609 23.9355L13.1323 25.166L14.9282 25.5176C15.0356 25.8935 15.1687 26.2615 15.3267 26.6191L14.1431 28.0884L14.8037 29.1401L16.6436 28.7095C16.76 28.8465 16.8807 28.9798 17.0054 29.1093C17.2658 29.3787 17.5433 29.6312 17.836 29.8652L17.4786 31.708L18.5538 32.3291L19.9585 31.1059C20.3605 31.2675 20.7743 31.3977 21.1964 31.4955L21.6549 33.2958L22.8926 33.3969L23.6368 31.6991C24.151 31.6682 24.6635 31.5913 25.1675 31.4677L26.3497 32.8373L27.5025 32.3759L27.4688 31.6815L24.7778 29.6411C23.9945 29.8391 23.1821 29.8921 22.3843 29.8021C20.8958 29.6343 19.4654 28.9621 18.3428 27.8012C15.777 25.1475 15.8503 20.9261 18.504 18.3603C19.7893 17.1175 21.4425 16.4871 23.0977 16.4692C24.8597 16.4502 26.6234 17.1253 27.9464 18.4936C30.0996 20.7207 30.393 24.071 28.8633 26.6074L30.3619 27.7441C30.5482 27.452 30.7165 27.1487 30.8658 26.8359L32.6778 26.7861L33.0484 25.6011L31.5851 24.523C31.6557 24.0797 31.6914 23.6315 31.692 23.1826L33.318 22.3565L33.1466 21.126L31.3522 20.7744C31.2013 20.2547 31.0011 19.7504 30.7546 19.2686L31.8238 17.7876L31.109 16.7724L29.3483 17.2837C29.3262 17.2602 29.3048 17.2365 29.2823 17.2133C29.0052 16.9266 28.7086 16.6593 28.3947 16.4135L28.7316 14.6732L27.6562 14.0522L26.3203 15.2153C25.8878 15.0413 25.4437 14.9058 24.9931 14.8052L24.5552 13.0854L23.3159 12.9844ZM20.5898 20.1797C20.105 20.1852 19.6244 20.3043 19.1836 20.5209L21.3033 22.1294C21.9443 22.6158 22.1262 23.5401 21.6342 24.189C21.1421 24.8382 20.1972 24.9358 19.5469 24.4425L17.4287 22.8355C17.2118 23.9977 17.6225 25.2291 18.6284 25.9922C19.5305 26.6765 20.6883 26.8046 21.6856 26.4464L21.9097 26.3657L22.0986 26.5093L28.4356 31.317L28.6245 31.4605L28.6084 31.6979C28.5316 32.7549 28.9642 33.8358 29.8667 34.5205C30.8726 35.2837 32.1704 35.3469 33.2314 34.8252L31.1133 33.2183C30.4629 32.7249 30.3032 31.7884 30.7955 31.1397C31.2877 30.491 32.2269 30.4176 32.8681 30.9038L34.9863 32.5109C35.2027 31.3491 34.7937 30.1171 33.7881 29.3541C32.8828 28.667 31.7341 28.5309 30.7427 28.8838L30.52 28.9629L30.3311 28.8194L23.9941 24.0118L23.8052 23.8682L23.8213 23.6324C23.894 22.583 23.4533 21.5139 22.5483 20.8272C21.9603 20.3811 21.2723 20.172 20.5899 20.1797L20.5898 20.1797ZM22.6319 24.4102L30.3135 30.2388L29.7847 30.9375L22.1016 25.1074L22.6319 24.4102Z" fill="white"/>
+                                          </g>
+                                          <defs>
+                                              <clipPath id="clip0_510_410">
+                                                <rect width="24" height="24" fill="white" transform="translate(12 12)"/>
+                                              </clipPath>
+                                          </defs>
+                                      </svg>
+                                      <svg class="lg:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <circle cx="12" cy="12.1626" r="12" fill="#374DA8"/>
+                                              <g clip-path="url(#clip0_510_1807)">
+                                                <path d="M11.658 6.65479L11.3012 7.46924C11.1166 7.48051 10.9329 7.50376 10.7512 7.53885L10.2056 6.83422L9.61741 7.03419L9.61448 7.93068C9.36534 8.05874 9.12659 8.21357 8.90105 8.39427L8.06984 8.02002L7.64428 8.47267L8.06981 9.27978C7.93405 9.47332 7.81474 9.6779 7.71314 9.89136L6.80053 9.91625L6.61523 10.5088L7.35206 11.0515C7.31679 11.2714 7.29956 11.4935 7.29858 11.7158L6.48047 12.1304L6.56616 12.7456L7.46412 12.9214C7.5178 13.1093 7.58436 13.2934 7.66334 13.4722L7.07156 14.2068L7.40187 14.7327L8.32179 14.5173C8.38 14.5858 8.44033 14.6525 8.50268 14.7173C8.63291 14.852 8.77163 14.9782 8.91799 15.0952L8.73928 16.0166L9.27689 16.3271L9.97927 15.7156C10.1802 15.7963 10.3872 15.8615 10.5982 15.9104L10.8274 16.8105L11.4463 16.8611L11.8184 16.0122C12.0755 15.9967 12.3318 15.9583 12.5838 15.8964L13.1749 16.5813L13.7513 16.3505L13.7344 16.0034L12.3889 14.9831C11.9972 15.0822 11.5911 15.1087 11.1921 15.0637C10.4479 14.9798 9.73268 14.6437 9.1714 14.0632C7.88848 12.7363 7.92516 10.6256 9.25198 9.34276C9.89463 8.72136 10.7213 8.40613 11.5489 8.3972C12.4299 8.38768 13.3117 8.72523 13.9732 9.40939C15.0498 10.523 15.1965 12.1981 14.4317 13.4663L15.181 14.0347C15.2741 13.8886 15.3583 13.7369 15.4329 13.5806L16.3389 13.5557L16.5242 12.9632L15.7925 12.4241C15.8278 12.2024 15.8457 11.9784 15.846 11.7539L16.659 11.3408L16.5733 10.7256L15.6761 10.5498C15.6006 10.2899 15.5006 10.0378 15.3773 9.79689L15.9119 9.0564L15.5545 8.54882L14.6742 8.80443C14.6631 8.79271 14.6524 8.78082 14.6412 8.76927C14.5026 8.6259 14.3543 8.49227 14.1973 8.36933L14.3658 7.49921L13.8281 7.18869L13.1602 7.77027C12.9439 7.68325 12.7218 7.61551 12.4966 7.56519L12.2776 6.70532L11.658 6.65479ZM10.2949 10.2524C10.0525 10.2552 9.81218 10.3147 9.5918 10.4231L10.6516 11.2273C10.9722 11.4705 11.0631 11.9327 10.8171 12.2571C10.5711 12.5817 10.0986 12.6305 9.77344 12.3838L8.71434 11.5803C8.6059 12.1614 8.81126 12.7771 9.3142 13.1587C9.76526 13.5008 10.3441 13.5649 10.8428 13.3858L10.9548 13.3455L11.0493 13.4173L14.2178 15.8211L14.3123 15.8929L14.3042 16.0115C14.2658 16.54 14.4821 17.0805 14.9333 17.4229C15.4363 17.8044 16.0852 17.8361 16.6157 17.5752L15.5566 16.7718C15.2315 16.5251 15.1516 16.0568 15.3977 15.7325C15.6438 15.4081 16.1134 15.3714 16.4341 15.6145L17.4932 16.418C17.6014 15.8372 17.3968 15.2211 16.894 14.8397C16.4414 14.4961 15.8671 14.428 15.3713 14.6045L15.26 14.6441L15.1656 14.5723L11.997 12.1685L11.9026 12.0967L11.9107 11.9788C11.947 11.4541 11.7267 10.9196 11.2742 10.5762C10.9802 10.3532 10.6361 10.2486 10.2949 10.2525L10.2949 10.2524ZM11.3159 12.3677L15.1567 15.282L14.8923 15.6313L11.0508 12.7163L11.3159 12.3677Z" fill="white"/>
+                                              </g>
+                                              <defs>
+                                              <clipPath id="clip0_510_1807">
+                                                <rect width="12" height="12" fill="white" transform="translate(6 6.1626)"/>
+                                              </clipPath>
+                                          </defs>
+                                      </svg>
+                                      <p class="font-medium text-base lg:font-bold lg:text-2xl ps-4">{{ feature.serviceTwo ?? "Repairing Vehicle.." }}</p>
+                                  </div>
+                                  <p class="ps-10 lg:ps-16 text-xs lg:text-base text-gray-6 pe-2">
+                                    {{
+                                      feature.descriptionTwo ??
+                                      "Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary, Customer & Vehicle Master."
+                                    }}
+                                  </p>
+                              </div>
+                              <div class="">
+                                  <div class="flex items-center">
+                                      <svg class="hidden lg:block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="24" cy="24" r="24" fill="#CC8AFF"/>
+                                        <path d="M16.2778 34.6955H28.6532C32.0436 34.6955 34.7917 31.9469 34.7917 28.5571V13.3047H22.4203C21.6063 13.3047 20.8255 13.6281 20.2499 14.2037C19.6742 14.7794 19.3508 15.5601 19.3508 16.3742L19.3467 19.3492" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.2084 24.8114H19.3468M23.0883 24.8114H30.8822M23.0883 28.7699H30.8822M16.2779 19.3491H19.3468V31.6259C19.3465 32.4398 19.0231 33.2203 18.4476 33.7958C17.8722 34.3714 17.0918 34.695 16.2779 34.6954C15.4639 34.6951 14.6833 34.3716 14.1078 33.796C13.5322 33.2205 13.2087 32.4399 13.2084 31.6259V22.418C13.2088 21.6041 13.5324 20.8237 14.108 20.2483C14.6835 19.6728 15.464 19.3494 16.2779 19.3491ZM23.0883 17.7671H26.4938V21.1726H23.0883V17.7671Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                    <svg class="lg:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <circle cx="12" cy="12.1626" r="12" fill="#CC8AFF"/>
+                                      <g clip-path="url(#clip0_510_1815)">
+                                        <path d="M8.13879 17.5104H14.3265C16.0217 17.5104 17.3957 16.136 17.3957 14.4411V6.81494H11.21C10.803 6.81494 10.4126 6.97664 10.1248 7.26446C9.83699 7.55228 9.67529 7.94265 9.67529 8.34969L9.67325 9.83719" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.60405 12.5681H9.67326M11.544 12.5681H15.441M11.544 14.5473H15.441M8.1388 9.8369H9.67326V15.9753C9.6731 16.3823 9.5114 16.7725 9.22367 17.0603C8.93595 17.3481 8.54574 17.5098 8.1388 17.5101C7.73181 17.5099 7.34153 17.3482 7.05374 17.0604C6.76595 16.7726 6.6042 16.3823 6.60405 15.9753V11.3714C6.60428 10.9644 6.76606 10.5742 7.05384 10.2865C7.34162 9.99876 7.73186 9.83705 8.1388 9.8369ZM11.544 9.0459H13.2468V10.7486H11.544V9.0459Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                       </g>
                                       <defs>
-                                          <clipPath id="clip0_510_410">
-                                            <rect width="24" height="24" fill="white" transform="translate(12 12)"/>
-                                          </clipPath>
+                                        <clipPath id="clip0_510_1815">
+                                          <rect width="14" height="14" fill="white" transform="translate(4.99988 5.1626)"/>
+                                        </clipPath>
                                       </defs>
-                                  </svg>
-                                  <p class="font-bold text-2xl ps-4">{{ feature.serviceTwo ?? "Repairing Vehicle.." }}</p>
+                                    </svg>
+                                      <p class="font-medium text-base lg:font-bold lg:text-2xl ps-4">{{ feature.serviceThree ?? "Departure" }}</p>
+                                  </div>
+                                  <p class="ps-10 lg:ps-16 text-gray-6 text-xs lg:text-base pe-2">
+                                    {{
+                                      feature.descriptionThree ??
+                                      "Schedule Appointment, Estimate, Inspection & Health card,Job Card."
+                                    }}
+                                  </p>
                               </div>
-                              <p class="ps-16 text-gray-6 pe-2">
-                                {{
-                                  feature.descriptionTwo ??
-                                  "Schedule Appointment, Estimate, Inspection & Health card, Job Card, Invoice, Order Summary, Customer & Vehicle Master."
-                                }}
-                              </p>
-                          </div>
-                          <div class="">
-                              <div class="flex items-center">
-                                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24" cy="24" r="24" fill="#CC8AFF"/>
-                                    <path d="M16.2778 34.6955H28.6532C32.0436 34.6955 34.7917 31.9469 34.7917 28.5571V13.3047H22.4203C21.6063 13.3047 20.8255 13.6281 20.2499 14.2037C19.6742 14.7794 19.3508 15.5601 19.3508 16.3742L19.3467 19.3492" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M13.2084 24.8114H19.3468M23.0883 24.8114H30.8822M23.0883 28.7699H30.8822M16.2779 19.3491H19.3468V31.6259C19.3465 32.4398 19.0231 33.2203 18.4476 33.7958C17.8722 34.3714 17.0918 34.695 16.2779 34.6954C15.4639 34.6951 14.6833 34.3716 14.1078 33.796C13.5322 33.2205 13.2087 32.4399 13.2084 31.6259V22.418C13.2088 21.6041 13.5324 20.8237 14.108 20.2483C14.6835 19.6728 15.464 19.3494 16.2779 19.3491ZM23.0883 17.7671H26.4938V21.1726H23.0883V17.7671Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                  </svg>
-                                  <p class="font-bold text-2xl ps-4">{{ feature.serviceThree ?? "Departure" }}</p>
-                              </div>
-                              <p class="ps-16 text-gray-6 pe-2">
-                                {{
-                                  feature.descriptionThree ??
-                                  "Schedule Appointment, Estimate, Inspection & Health card,Job Card."
-                                }}
-                              </p>
                           </div>
                       </div>
                   </div>
-              </div>
+              </section>
           </section>
-      </section>
-    </div>
+      </div>
   </ContentList>
 </template>
