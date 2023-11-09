@@ -1,10 +1,10 @@
 <template>
   <ContentList path="/features" v-slot="{ list }">
-      <div v-for="feature in list" :key="feature._path">
+      <div id="about" v-for="feature in list" :key="feature._path">
           <section class="bg-white 3xl:px-[16.25rem] 3xl:py-[7.75rem] xl:px-[10rem] md:px-[3rem] lg:py-[4rem] px-[1rem] py-[2.75rem]">
               <section class="md:mb-[3rem] mb-8 lg:mx-[14.88rem]">
                   <div class="flex justify-center">
-                      <p class="font-extrabold  text-2xl xl:text-4xl">{{ feature.title ?? "Our Features" }}</p>
+                      <p class="font-extrabold leading-[48px] mb-4 text-2xl xl:text-4xl">{{ feature.title ?? "Our Features" }}</p>
                   </div>
                   <div class="text-center flex justify-center">
                       <p class="font-normal text-sm md:text-base">

@@ -1,11 +1,11 @@
 <template>
     <!-- for web -->
-    <section class="hidden lg:block bg-gray-3 3xl:px-[16.25rem] 3xl:py-[6rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem]">
+    <section id="services" class="hidden lg:block bg-gray-3 3xl:px-[16.25rem] 3xl:py-[6rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem]">
         <div class="grid grid-cols-2">
             <div class="flex items-center justify-end">
-                <div class="py-[86px]">
+                <div class="py-[86px] px-4">
                     <div class="mb-[3rem]">
-                        <p class="text-4xl font-bold">Products</p>
+                        <p class="text-4xl leading-[48px] font-bold">Products</p>
                         <p class="text-base mt-4 text-gray-6">As suggested by the name, wholesale auto spare parts are units that automobile owners can use as
                             replacements to exchange for a dysfunctional piece of their</p>
                     </div>
@@ -59,7 +59,7 @@
                         </div>
                 </div>
             </div>
-            <div class="flex items-center justify-center p-[43px] bg-blue-1">
+            <div class="flex items-center justify-center p-[43px] rounded-[1rem] bg-blue-1">
                 <img src="~/assets/img/product-section.png" alt="">
             </div>
         </div>

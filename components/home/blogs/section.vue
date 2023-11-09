@@ -2,12 +2,11 @@
 import { blogInfo } from "./data.js";
 </script>
 <template>
-  <div
+  <div id="blog"
     class="3xl:px-[16.25rem] 3xl:py-[8.15rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[1rem] py-[2.75rem] bg-gray-1"
   >
     <div class="flex justify-between mb-8">
       <h1 class="lg:text-4xl text-[18px] font-bold py-2">Our Blogs</h1>
-      <HomeBlogsPagination />
     </div>
 
     <ContentList path="/blogs" v-slot="{ list }">
@@ -118,7 +117,7 @@ import { blogInfo } from "./data.js";
               <p class="mb-6 line-clamp-6">{{ list[1].description }}</p>
               <nuxt-link
                 :to="`/blog?blogId=${list[1].id}`"
-                class="text-[14px] text-purple-1 cursor-pointer font-bold"
+                class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
               >
                 Read More
               </nuxt-link>
@@ -163,7 +162,7 @@ import { blogInfo } from "./data.js";
                 </p>
                 <nuxt-link
                   :to="`/blog?blogId=${list[2].id}`"
-                  class="text-[14px] text-purple-1 cursor-pointer font-bold"
+                  class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
                 >
                   Read More
                 </nuxt-link>
