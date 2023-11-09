@@ -108,7 +108,7 @@
                     class="border px-24 py-4 rounded-lg text-[#646BEE]"
                     :class="price.textColor"
                   >
-                    Choose Plan
+                    Contact Us
                   </button>
                 </section>
               </div>
@@ -293,7 +293,7 @@
                     class="w-[311px] px-10 py-4 lg:py-0 lg:w-[296px] border-2 rounded-lg text-[#646BEE] font-600"
                     :class="[price.textColor]"
                   >
-                    Choose Plan
+                    Contact Us
                   </button>
                 </section>
               </div>
