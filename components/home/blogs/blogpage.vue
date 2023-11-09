@@ -7,7 +7,7 @@ const blog = blogInfo.find((blog) => blog.id === blogID);
 const blogId = blog.id;
 console.log("blog", blog);
 const previousPage = () => {
-  router.push("/");
+  window.history.back();
 };
 </script>
 <template>
@@ -15,77 +15,22 @@ const previousPage = () => {
     <div v-for="(singleBlog, index) in list" :key="singleBlog._path">
       <div v-if="blogId == singleBlog.id">
         <div
-          class="3xl:px-[16rem] 3xl:py-[3rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[2rem] py-[44px] bg-[#F1F1F1]"
+          class="flex flex-col 3xl:px-[16rem] 3xl:py-[3rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[2rem] py-[44px] bg-[#F1F1F1]"
         >
-          <button class="flex items-center" @click="previousPage">
-            <svg
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g filter="url(#filter0_b_510_1409)">
-                <rect
-                  width="56"
-                  height="56"
-                  rx="28"
-                  fill="white"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M35 28H21M21 28L28 35M21 28L28 21"
-                  stroke="#646BEE"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="55"
-                  height="55"
-                  rx="27.5"
-                  stroke="#EAECF0"
-                />
-              </g>
-              <defs>
-                <filter
-                  id="filter0_b_510_1409"
-                  x="-8"
-                  y="-8"
-                  width="72"
-                  height="72"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feGaussianBlur in="BackgroundImageFix" stdDeviation="4" />
-                  <feComposite
-                    in2="SourceAlpha"
-                    operator="in"
-                    result="effect1_backgroundBlur_510_1409"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_backgroundBlur_510_1409"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </button>
+          <div class="mb-4">
+            <button class="flex items-center" @click="previousPage">
+              <img src="~/assets/img/blogs/_Testiomonial%20carousel%20arrow.svg" alt="">
+            </button>
+          </div>
           <div class="space-x-2">
             <div class="">
               <h1 class="lg:text-4xl text-2xl font-bold mb-4">
                 {{ singleBlog.title }}
               </h1>
               <div class="font-normal text-base mb-6">
-                <div class="float-right m-2 w-[50%]">
-                  <div class="mb-3">
-                    <img :src="blog.image" alt="" class="rounded-[8px]" />
-                  </div>
+                <div class="float-right m-2">
+                  <div class="flex flex-col">
+                    <img :src="blog.image" alt="" class="rounded-[8px] mb-3" />
                   <div class="flex justify-between pb-3 text-gray-8">
                     <a
                       href=""
@@ -93,7 +38,7 @@ const previousPage = () => {
                       >Auto Garaze</a
                     >
                     <div
-                      class="flex font-normal text-sm md:text-[12px] text-centerjustify-between"
+                      class="flex font-normal text-sm md:text-[12px] text-center justify-between"
                     >
                       <div class="flex items-center mr-4">
                         <svg
@@ -134,6 +79,7 @@ const previousPage = () => {
                         >
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
                 {{ singleBlog.description }}

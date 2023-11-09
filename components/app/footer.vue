@@ -2,10 +2,10 @@
 import Logo from "../../assets/img/footer/Mask group (1).png"
 import TireImg from "../../assets/img/footer/Ellipse 1669.png"
 const usefulLinks = [
-  { id: 1, text: "About us", url: "#" },
-  { id: 2, text: "Contacts", url: "#" },
-  { id: 3, text: "Blogs", url: "#" },
-  { id: 4, text: "Support Service", url: "#" },
+  { id: 1, text: "About us", url: "#about" },
+  { id: 2, text: "Contacts", url: "#contact" },
+  { id: 3, text: "Blogs", url: "#blog" },
+  { id: 4, text: "Support Service", url: "#service" },
 ];
 const supportLinks = [
   { id: 1, text: "Community", url: "#" },
