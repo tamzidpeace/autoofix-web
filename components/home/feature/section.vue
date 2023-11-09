@@ -13,7 +13,7 @@
             </div>
         </section>
         <section class="grid grid-cols-1 lg:grid-cols-2 ">
-                <div class="flex justify-center lg:justify-start 2xl:justify-end">
+                <div class="flex justify-center lg:justify-start 2xl:justify-end mb-4">
                     <img class="lg:hidden" src="~/assets/img/feature-section.png" alt="">
                     <img class="hidden lg:block px-6" src="~/assets/img/feature-section-pc.png" alt="">
                 </div>
