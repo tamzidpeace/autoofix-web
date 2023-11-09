@@ -25,7 +25,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
           <p>Join our subscribers list to get instant latest news and special offers</p>
           <div class="flex">
             <input type="email" class="text-gray-700 z-20 border-none" placeholder="Your Email" >
-            <button class="bg-[#F79009] flex rounded items-center px-2">Subscribe
+            <button class="bg-yellow-7 flex rounded items-center px-2">Subscribe
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 5.99854V7.99854H14.59L5 17.5885L6.41 18.9985L16 9.40854V17.9985H18V5.99854H6Z" fill="white"/>
               </svg>
