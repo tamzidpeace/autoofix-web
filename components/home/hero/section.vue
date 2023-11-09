@@ -1,0 +1,112 @@
+<template>
+  <!-- body hero section mobile & web start-->
+  <section class="bg-[#646bee] w-full relative">
+    <section
+      class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 px-8"
+    >
+      <!-- left-side-section start -->
+      <section
+        class="flex items-center justify-center"
+      >
+        <section class="">
+          <section class="relative">
+            <section
+              class="absolute -left-[30%] lg:-left-[20%] lg:-top-[20%] z-0 "
+            >
+              <img
+                class="w-[40%] md:w-[80%] lg:w-[80%]"
+                src="~/assets/img/right-gra.png"
+                alt="rightsection"
+                srcset=""
+              />
+            </section>
+            <section class="z-10 relative ">
+              <p
+                class="text-white font-[800] pt-10 text-[24px] text-center lg:text-left lg:text-[64px] w-full"
+              >
+                Best Application for Your Business & Solution.
+              </p>
+              <p
+                class="text-white text-[16px] font-[400] ps-4 pt-4 pb-4 lg:text-[24px] lg:mb-10"
+              >
+                Autoofix is the best software platform for running garage
+                business.
+              </p>
+
+              <section class="flex justify-center lg:mt-5 relative">
+                <button class="hidden lg:block">
+                  <img
+                    src="~/assets/img/pc-version-hero-section-btn (1).png"
+                    alt=""
+                  />
+                </button>
+
+                <button class="hidden lg:block ms-2">
+                  <img
+                    src="~/assets/img/pc-version-hero-section-btn (2).png"
+                    alt=""
+                  />
+                </button>
+                <div
+                  class="hidden lg:block absolute lg:left-[90%] lg:top-[-2.5rem]"
+                >
+                  <img src="~/assets/img/rbtnleft.png" alt="" class="" />
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <!-- left-side-section end -->
+      <!-- right-side-section start-->
+      <section
+        class="flex items-start justify-center lg:items-center lg:justify-start"
+      >
+        <section class="relative hidden lg:block">
+          <img src="~/assets/img/laptop.png" alt="" class="" />
+          <section
+            class="absolute top-[5rem] hover:animate-bounce lg:left-[1.5%] lg:top-[11rem]"
+          >
+            <img
+              class="w-10 lg:w-full"
+              src="~/assets/img/tabler_car-crash.png"
+              alt="car"
+            />
+          </section>
+          <section
+            class="absolute animate-bounce left-[90%] top-[8rem] lg:top-[19.5rem]"
+          >
+            <img src="~/assets/img/bouncecar.png" alt="car" />
+          </section>
+        </section>
+        <section class="lg:hidden md:block">
+          <img src="~/assets/img/mobileviewgroupimageherosection.png" alt="" />
+        </section>
+      </section>
+
+      <section class="flex justify-center relative pb-10">
+        <button class="lg:hidden">
+          <img src="~/assets/img/mobilepalystorebtn.png" alt="" />
+        </button>
+        <button class="lg:hidden ms-2">
+          <img src="~/assets/img/demoelporebtn.png" alt="" />
+        </button>
+      </section>
+
+      <!-- right-side-section end-->
+      <!-- icon-car place in middle of the screen start-->
+      <!-- <section class="hidden lg:block">
+          <section
+            class="absolute border-2 border-red-800 z-10 left-[20%] -top-[20%]"
+          >
+            <img src="~/assets/img/dashboardcariconwhite.png" alt="car" />
+          </section>
+      </section> -->
+      <!-- icon-car place in middle of the screen end-->
+    </section>
+    <!-- white car position -->
+    <div class="hidden lg:block absolute -top-[-62%] left-[50%]">
+      <img src="~/assets/img/dashboardcariconwhite.png" alt="">
+    </div>
+  </section>
+</template>

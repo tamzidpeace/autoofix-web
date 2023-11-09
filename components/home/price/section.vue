@@ -1,0 +1,388 @@
+<template>
+  <div class="hidden lg:block">
+    <!-- body price section start -->
+    <section
+      class="flex justify-center items-center bg-[#F2F2FD] lg:px-[6rem] lg:py-[4rem] px-[1rem] py-[44px]"
+    >
+      <section class="3xl:px-[16rem] xl:px-[10rem]">
+        <!-- description section start -->
+        <section class="text-center">
+          <p class="p-2">Our Best Pricing Plan</p>
+          <p class="text-3xl font-600 p-2">Choose plan that’s right for you</p>
+        </section>
+        <!-- description section end -->
+        <!-- choose plan button section start -->
+        <div class="flex w-full justify-center">
+          <div v-if="selectedPrice === 'month'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
+            >
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
+          <div v-if="selectedPrice === 'year'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
+            >
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
+        </div>
+        <!-- choose plan button section end -->
+        <!-- price section start -->
+        <!-- grid grid-flow-col auto-cols-max -->
+        <section
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-2 gap-6"
+        >
+          <!-- Price section 1 -->
+          <div v-for="price in priceData">
+            <section
+              class="rounded-3xl border-2 px-4 py-8"
+              :class="[price.bgColor, price.textColor]"
+            >
+              <!-- :class="[price.color, price.textColor]" -->
+              <div class="">
+                <section class="flex justify-center">
+                  <img :src="price.image" alt="pricelogo" />
+                </section>
+                <section class="flex justify-center">
+                  <p>{{ price.title }}</p>
+                </section>
+                <section class="">
+                  <section class="flex justify-center">
+                    <p class="m-0 text-md lg:text-4xl font-[600] leading-none">
+                      ${{ price?.price ?? 0 }}
+                    </p>
+                    <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
+                  </section>
+                  <section class="pt-6 ps-4 pe-4">
+                    <p class="text-[16px] mb-5">
+                      {{ price?.description ?? " " }}
+                    </p>
+                    <section class="" v-for="option in price.options">
+                      <div class="flex justify-start item-center mb-2">
+                        <img
+                          class="h-[26px] w-[26px]"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p class="ps-2">{{ option ?? "" }}</p>
+                      </div>
+                    </section>
+                    <section class="py-12" v-if="price == 2">
+                      <p class="border-b-2 border-white w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
+                    <section class="py-12" v-else>
+                      <p class="border-b-2 border-dark-500 w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
+                  </section>
+                </section>
+                <section class="flex justify-center">
+                  <button
+                    class="border px-24 py-4 rounded-lg text-[#646BEE]"
+                    :class="price.textColor"
+                  >
+                    Contact Us
+                  </button>
+                </section>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- price section end-->
+      </section>
+    </section>
+    <!-- body price section end -->
+  </div>
+
+  <div class="lg:hidden h-[980px] bg-[#FFF] pt-5">
+    <!-- body price section start -->
+    <section class="flex justify-center items-center">
+      <section class="lg:w-4/6">
+        <!-- description section start -->
+        <section class="text-center">
+          <p class="p-2 font-[500]">Our Best Pricing Plan</p>
+          <p class="text-3xl font-600 p-2">Choose plan that’s right for you</p>
+        </section>
+        <!-- description section end -->
+        <!-- choose plan button section start -->
+        <div class="flex w-full justify-center">
+          <div v-if="selectedPrice === 'month'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
+            >
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
+          <div v-if="selectedPrice === 'year'">
+            <section
+              class="border-2 flex justify-center bg-white rounded-full mb-10 mt-5"
+            >
+              <button
+                class="w-1/2 hover:bg-blue-600 hover:text-white text-dark-500 font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perMonthPrice"
+              >
+                Monthly
+              </button>
+              <button
+                class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                @click="perYearPrice"
+              >
+                Yearly
+              </button>
+            </section>
+          </div>
+        </div>
+        <!-- choose plan button section end -->
+        <!-- price section start -->
+        <!-- grid grid-flow-col auto-cols-max -->
+      </section>
+    </section>
+    <!-- :loop="true" -->
+    <div class="border-2 border-red-800">
+      <Swiper
+        :modules="[SwiperAutoplay, SwiperEffectCreative]"
+        :slides-per-view="1"
+        :effect="'creative'"
+        :creative-effect="{
+          prev: {
+            shadow: false,
+            translate: ['-20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }"
+      >
+        <SwiperSlide v-for="price in priceData" :key="price.id">
+          <div>
+            <!-- Price section 1 -->
+            <section
+              class="rounded-3xl border-2 m-4"
+              :class="[price.color, price.textColor]"
+            >
+              <div class="pt-8 h-full">
+                <section class="flex justify-center">
+                  <img :src="price.image ?? ''" alt="" />
+                </section>
+                <section class="flex justify-center">
+                  <p>{{ price?.title }}</p>
+                </section>
+                <section class="pt-4 lg:h-[450px]">
+                  <section class="flex justify-center">
+                    <p class="m-0 text-5xl font-[600] leading-none">
+                      ${{ price?.price }}
+                    </p>
+                    <p class="m-0 mt-2 ms-2 font-[500]">/ Per Month</p>
+                  </section>
+                  <section class="pt-6 ps-4 pe-4">
+                    <p class="text-[16px] mb-5">
+                      {{ price.description }}
+                    </p>
+                    <section class="lg:h-[225px]">
+                      <div class="flex mb-2">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Unlimited Support</p>
+                      </div>
+                      <div class="flex mb-2">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Sync data across devices</p>
+                      </div>
+                      <div class="flex mb-2">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Create Multiple Firms</p>
+                      </div>
+                      <div class="flex mb-2">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Check Profit on Invoices</p>
+                      </div>
+                      <div class="flex mb-2">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Keep different rates for each party</p>
+                      </div>
+                      <div class="flex mb-2">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Set multiple pricing for items</p>
+                      </div>
+                      <div class="flex">
+                        <img
+                          class="pe-3"
+                          src="~/assets/img/righticon.png"
+                          alt=""
+                        />
+                        <p>Balance Sheet</p>
+                      </div>
+                    </section>
+                    <section class="py-4" v-if="price == 2">
+                      <p class="border-b-2 border-white w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
+                    <section class="py-4" v-else>
+                      <p class="border-b-2 border-dark-500 w-3/6">
+                        +10 More Features
+                      </p>
+                    </section>
+                  </section>
+                </section>
+                <section
+                  class="flex justify-center lg:mt-0 lg:h-[56px] pt-6 pb-6"
+                >
+                  <button
+                    class="w-[311px] px-10 py-4 lg:py-0 lg:w-[296px] border-2 rounded-lg text-[#646BEE] font-600"
+                    :class="[price.textColor]"
+                  >
+                    Contact Us
+                  </button>
+                </section>
+              </div>
+            </section>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+    <!-- body price section end -->
+  </div>
+</template>
+
+<script setup>
+import { prices } from "./pricedata";
+const selectedPrice = ref("month");
+let priceData = ref([...prices]);
+let pricesData = [];
+
+const perMonthPrice = () => {
+  selectedPrice.value = "month";
+  priceData.value = [...prices];
+};
+
+const perYearPrice = () => {
+  selectedPrice.value = "year";
+  let pricePerYear = [];
+  priceData.value.map((price) => {
+    let priceObject = { ...price, price: price.price * 10 };
+    pricePerYear.push(priceObject);
+  });
+  priceData.value = pricePerYear;
+};
+//   {
+//     id: 1,
+//     title: "Lite",
+//     price: 2500,
+//     priceYear: 4500,
+//     description:
+//       "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
+//     options: [
+//       "Unlimited Support",
+//       "Sync data across devices",
+//       "Create Multiple Firms",
+//       "Check Profit on Invoices",
+//       "Keep different rates for each party",
+//       "Set multiple pricing for items",
+//       "Balance Sheet",
+//     ],
+//     image: "~/assets/img/carlight.png",
+//     color: "bg-[#FFF]",
+//   },
+//   {
+//     id: 2,
+//     title: "Plus",
+//     price: 4500,
+//     priceYear: 4500,
+//     description:
+//       "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
+//     options: [
+//       "Unlimited Support",
+//       "Sync data across devices",
+//       "Create Multiple Firms",
+//       "Check Profit on Invoices",
+//       "Keep different rates for each party",
+//       "Set multiple pricing for items",
+//       "Balance Sheet",
+//     ],
+//     image: "",
+//     color: "bg-[#646BEE]",
+//     textColor: "text-white",
+//   },
+//   {
+//     id: 3,
+//     title: "Enterprise",
+//     price: 7500,
+//     priceYear: 4500,
+//     description:
+//       "Perfect for Standard Packages that are just getting started. It is a long established the fact.",
+//     options: [
+//       "Unlimited Support",
+//       "Sync data across devices",
+//       "Create Multiple Firms",
+//       "Check Profit on Invoices",
+//       "Keep different rates for each party",
+//       "Set multiple pricing for items",
+//       "Balance Sheet",
+//     ],
+//     image: "",
+//     color: "bg-[#FFF]",
+//   },
+// ];
+</script>

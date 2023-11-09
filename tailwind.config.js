@@ -7,10 +7,28 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'blue' : {
+          1 : "",
+          2 : "",
+        },
+        'purple': {
+          1 : '#646BEE',
+          4 : '#5437A1',
+        },
+        'gray' : {
+          1: '#F1F1F1',
+          2: '#F0EEFE',
+          5: '#63636B',
+          8: '#232323'
+        }
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }
 
