@@ -1,6 +1,16 @@
 <template>
+<!-- 
+<ContentDoc path="/articles/index.md" v-slot="{ doc }"> 
+adasdsad + doc
+</ContentDoc> -->
 
-<!-- <ContentDoc path="/articles/nuxt3" /> -->
+
+<ContentList path="/articles" v-slot="{ list }">
+      <div v-for="article in list" :key="article._path">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+      </div>
+    </ContentList>
 
      <!-- <ContentDoc path="/features">
       <article>
