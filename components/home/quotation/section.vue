@@ -20,7 +20,7 @@
     <!-- for phone -->
     <section class="lg:hidden bg-blue-4 px-[1rem] py-[2.75rem] md:px-[3rem]">
         <div class="">
-            <div class="flex justify-center ">
+            <div class="flex justify-center mb-3">
                 <img src="~/assets/img/quatation.png" alt="">
             </div>
             <div class="flex justify-start">
