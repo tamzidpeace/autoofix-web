@@ -15,6 +15,7 @@ export default {
         'blue' : {
           1 : "#D2D3EA",
           2 : "#F9F9FF",
+          8 : "#3B67DC",
         },
         'purple': {
           1 : '#646BEE',

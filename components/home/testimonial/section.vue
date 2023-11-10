@@ -1,36 +1,38 @@
 <template class="">
-
-  <div class="testimonials-style">
+  <div class="testimonials-style 3xl:px-[16.25rem] 3xl:py-[6.25rem] xl:px-[10rem] lg:py-[4rem]">
     <div class="flex justify-center">
-      <div class="w-[343px]">
-        <p class="text-[24px] font-[700] text-center">Testimonials</p>
-        <p class="text-center text-3xl">What our clients think about us?</p>
+      <div class="mb-8">
+        <p class="text-base font-semibold text-center text-blue-8 mb-2">Testimonials</p>
+        <p class="text-center font-bold text-3xl">What our clients think about us?</p>
       </div>
     </div>
-    <div class="flex justify-center h-[700px] items-center">
-      <div class="w-5/6">
+    <ContentList path="/testimonial" v-slot="{ list }">
+    <div class="flex justify-center items-center">
+      <div class="w-full relative">
+        <img
+            class="absolute quotation-icon z-20"
+            src="~/assets/img/quoatationicon.png"
+            alt=""
+        />
         <Carousel :itemsToShow="3" :wrapAround="true" :transition="500">
-          <Slide v-for="slide in 5" :key="slide">
-            <div class="carousel__item">
-              <div class="relative p-[62px]">
-                <div class="relative">
-                  <img
-                    class="absolute quotation-icon"
-                    src="~/assets/img/quoatationicon.png"
-                    alt=""
-                  />
-                  <div class="flex justify-center">
+          <Slide v-for="(slide,  index) in list" :key="index">
+            <div class="carousel__item w-full">
+              <div class="">
+                <div class="">
+                  <div class="flex justify-center mb-4">
                     <img src="~/assets/img/t1.png" alt="" />
                   </div>
-                  <div class="flex justify-center p-8">
+                  <div class="flex justify-center">
                     <div class="text-center">
-                      <h1 class="text-[20px] text-[#1C0081] font-[700]">
-                        Darlene Robertson + {{ slide ?? "" }}
+                      <h1 class="text-[20px] custom text-[#1C0081] font-[700] mb-1">
+                        {{ slide.title }}
                       </h1>
-                      <p class="font-[400] pt-2">
-                        Branch Manager of Auto Garage
+                      <p class="text-sm text-gray-7">
+                        {{ slide.profession }}
                       </p>
-                      <p class="pt-8 font-[16px]"></p>
+                      <p class="pt-6 text-base text-gray-7">
+                        {{ slide.description }}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -44,6 +46,7 @@
         </Carousel>
       </div>
     </div>
+    </ContentList>
   </div>
 </template>
 <script>
@@ -73,7 +76,7 @@ components: {
 
 <style scoped>
 .carousel__slide {
-  padding: 20px;
+  /*padding: 20px;*/
 }
 
 .carousel__viewport {
@@ -101,45 +104,50 @@ components: {
 }
 
 .carousel__slide--prev {
-  opacity: 1;
   transform: rotateY(-10deg) scale(0.95);
-  /* border: 1px solid green; */
-  height: 520px;
-  padding-top: 10px;
-  margin-top: 30px;
+  padding: 25px 40px 25px 40px;
+  /*height: 520px;*/
+  margin-top: 20px;
   background-color: white;
   border-radius: 15px;
-  left: 10%;
+  box-shadow: #303030;
+  filter: grayscale(100%);
 }
 
 .carousel__slide--next {
-  opacity: 1;
   transform: rotateY(10deg) scale(0.95);
   /* border: 1px solid rgb(0, 218, 18); */
-  height: 520px;
-  padding-top: 10px;
-  margin-top: 30px;
+  /*height: 520px;*/
+  padding: 25px 40px 25px 40px;
+  margin-top: 20px;
   background-color: white;
   border-radius: 15px;
   left: -10%;
+  filter: grayscale(100%);
 }
 
 .carousel__slide--active {
   opacity: 1;
-  width: 35%;
-  transform: rotateY(0) scale(1.1);
+  width: 45% !important;
+  padding: 65px 80px 65px 80px;
+  transform: rotateY(0) scale(0.9);
   border-radius: 15px;
-  height: 600px;
+  /*height: 600px;*/
   /* background-color: #faf9ff; */
   background-color: white;
+  left: -5%;
   z-index: 10;
+  box-shadow: 0 4px 24px 2px #54535B40;
+}
+.carousel__prev  {
+  left: 30% !important;
 }
 .testimonials-style {
   background-color: #faf9ff !important;
 }
 .quotation-icon {
-  top: -25%;
-  left: -15%;
+  top: 10%;
+  left: 33%;
 }
 
 .carousel__slide--prev
@@ -156,5 +164,8 @@ components: {
   > .relative
   > .quotation-icon {
   display: none;
+}
+.carousel__slide--next > .custom {
+  font-size: 14px !important;
 }
 </style>
