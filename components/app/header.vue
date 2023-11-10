@@ -8,7 +8,7 @@
         <div class="flex md:order-2">
           <button type="button"
             class="hidden lg:block">
-            <img src="~/assets/img/demoexplorebtn.png" class="h-8 mr-3" alt="Autofix Logo" />
+            <img src="~/assets/img/button/Group%2020371%20(1).svg" class="h-8 mr-3" alt="Autofix Logo" />
           </button>
           <button data-collapse-toggle="navbar-cta" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
