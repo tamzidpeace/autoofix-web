@@ -15,10 +15,13 @@ export default {
         'blue' : {
           1 : "#D2D3EA",
           2 : "#F9F9FF",
+          3 : "#F6F8FF",
+          4 : "#F5F6F6",
           8 : "#3B67DC",
         },
         'purple': {
           1 : '#646BEE',
+          2 : '#dcc9f5',
           4 : '#5437A1',
         },
         'gray' : {

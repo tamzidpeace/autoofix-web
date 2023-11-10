@@ -22,3 +22,9 @@ onMounted(() => {
   initFlowbite();
 })
 </script>
+
+<style scoped>
+/*main {
+  font-family: Inter;
+}*/
+</style>
