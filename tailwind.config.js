@@ -21,6 +21,7 @@ export default {
         },
         'purple': {
           1 : '#646BEE',
+          2 : '#dcc9f5',
           4 : '#5437A1',
         },
         'gray' : {

@@ -48,6 +48,74 @@
     </div>
     </ContentList>
   </div>
+
+
+<!--  for mobile-->
+<!--  <div class="lg:hidden testimonials-style py-10 px-4" id="testimonial">
+    <div class="flex justify-center">
+      <div class="mb-8">
+        <p class="text-base font-semibold text-center text-blue-8 mb-2">Testimonials</p>
+        <p class="text-center font-bold text-3xl">What our clients think about us?</p>
+      </div>
+    </div>
+    <ContentList path="/testimonial" v-slot="{ list }">
+      <div class="flex justify-center items-center">
+        <div class="w-full relative">
+          <img
+              class="absolute quotation-icon z-20"
+              src="~/assets/img/quoatationicon.png"
+              alt=""
+          />
+    <div class="">
+      <Swiper
+          :modules="[SwiperAutoplay, SwiperPagination, SwiperEffectCreative]"
+          :slides-per-view="1"
+          :effect="'creative'"
+          :pagination="{
+          clickable: true,
+        }"
+          :creative-effect="{
+          prev: {
+            shadow: false,
+            translate: ['20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }"
+      >
+        <SwiperSlide v-for="(slide,  index) in list" :key="index">
+          &lt;!&ndash; Price section 1 &ndash;&gt;
+          <div class="w-full">
+            <div class="">
+              <div class="">
+                <div class="flex justify-center mb-4">
+                  <img src="~/assets/img/t1.png" alt="" />
+                </div>
+                <div class="flex justify-center">
+                  <div class="text-center">
+                    <h1 class="text-[20px] custom text-[#1C0081] font-[700] mb-1">
+                      {{ slide.title }}
+                    </h1>
+                    <p class="text-sm text-gray-7">
+                      {{ slide.profession }}
+                    </p>
+                    <p class="pt-6 text-base text-gray-7">
+                      {{ slide.description }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+        </div>
+      </div>
+    </ContentList>
+
+  </div>-->
 </template>
 <script>
 import { defineComponent } from "vue";

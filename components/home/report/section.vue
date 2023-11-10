@@ -12,7 +12,7 @@ const Info = [
 
 <template>
     <!-- for web -->
-    <section class="hidden lg:block bg-white">
+    <section class="hidden lg:block bg-white 3xl:px-[16.25rem] 3xl:py-[7.5rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem]">
         <div class="grid grid-cols-2">
             <div class="flex items-center justify-center px-8">
                 <img src="~/assets/img/report.png" alt="">
