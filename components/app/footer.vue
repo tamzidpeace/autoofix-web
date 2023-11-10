@@ -147,7 +147,7 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
 
 <style scoped>
 .image-container {
-  background-image: url('~/assets/img/footer/Group 1000010443.png');
+  background-image: url('/assets/img/footer/Group_1000010443.png');
   background-size: cover;
   background-repeat: round;
   width: 100%;
