@@ -1,6 +1,6 @@
 <template>
     <!-- body price section start -->
-    <section class="hidden lg:flex justify-center bg-gray-4 3xl:px-[16.25rem] 3xl:py-[7.5rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem] items-center">
+    <section id="price" class="hidden lg:flex justify-center bg-gray-4 3xl:px-[16.25rem] 3xl:py-[7.5rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem] items-center">
         <section>
         <!-- description section start -->
         <section class="text-center">
@@ -112,7 +112,7 @@
     </section>
     <!-- body price section end -->
 
-  <div class="lg:hidden bg-gray-4 py-10 px-4">
+  <div class="lg:hidden bg-gray-4 py-10 px-4" id="price">
     <!-- body price section start -->
     <section class="flex justify-center items-center">
       <section class="lg:w-4/6">
