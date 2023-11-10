@@ -2,7 +2,7 @@
 import { blogInfo } from "./data.js";
 </script>
 <template>
-  <div id="blog"
+  <div id="blogs"
     class="3xl:px-[16.25rem] 3xl:py-[8.15rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[1rem] py-[2.75rem] bg-gray-1"
   >
     <div class="flex justify-between mb-8">
