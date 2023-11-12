@@ -18,10 +18,10 @@ function showHide(item) {
   <div v-for="(item,index) in list" :key="index" id="accordion-color"
        data-accordion="collapse"
        class="mb-2"
-       :class="[item.open && 'border border-1 rounded-[4px] border-[#646BEE]']"
+       :class="[item.open && 'border border-1 rounded-[4px] border-purple-1']"
   >
       <h2 class="p-4 xl:text-lg text-md"
-      :class = "[item.open ? 'bg-[#646BEE] text-white' : 'text-[#6D6D6D] border border-solid bg-[#FBFBFB] border-1 border-[#F0EEFE] shadow-sm border-l-4 border-l-[#646BEE] rounded-[4px] rounded-l-[6px]']"
+          :class="{ 'bg-purple-1 text-white': item.open, 'text-gray-9 border border-solid bg-[#FBFBFB] border-1 border-gray-2 shadow-sm border-l-4 border-l-purple-1 rounded-[4px] rounded-l-[6px]': !item.open }"
       >
           <button type="button"
                   @click="showHide(item)"
@@ -36,19 +36,19 @@ function showHide(item) {
               </svg>
           </button>
       </h2>
-      <transition name="fade">
-          <div class="p-4 rounded-[4px] bg-[#FBFBFB] transform transition-transform" :class="{hidden : !item.open}">
+      <transition-group name="fade" tag="div">
+          <div v-if="item.open" class="p-4 rounded-[4px] bg-[#FBFBFB] transform transition-transform">
               <div class="font-normal text-base">
                   <p class="text-[#4E4E4E]">{{ item.content }}</p>
               </div>
           </div>
-      </transition>
+      </transition-group>
   </div>
 </template>
 
 <style scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.1s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
