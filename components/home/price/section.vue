@@ -1,6 +1,7 @@
 <template>
+  <div id="price">
     <!-- body price section start -->
-    <section id="price" class="hidden lg:flex justify-center bg-gray-4 3xl:px-[16.25rem] 3xl:py-[7.5rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem] items-center">
+    <section class="hidden lg:flex justify-center bg-gray-4 3xl:px-[16.25rem] 3xl:py-[7.5rem] lg:px-[3rem] xl:px-[10rem] lg:py-[4rem] items-center">
         <section>
         <!-- description section start -->
         <section class="text-center">
@@ -109,132 +110,133 @@
         </section>
         <!-- price section end-->
       </section>
-    </section>
+    </section >
     <!-- body price section end -->
 
-  <div class="lg:hidden bg-gray-4 py-10 px-4" id="price">
-    <!-- body price section start -->
-    <section class="flex justify-center items-center">
-      <section class="lg:w-4/6">
-        <!-- description section start -->
-        <section class="text-center">
-          <p class="mb-2 text-base font-medium">Our Best Pricing Plan</p>
-          <p class="text-2xl font-bold mb-6">Choose plan that’s right for you</p>
+    <div class="lg:hidden bg-gray-4 py-10 px-4">
+      <!-- body price section start -->
+      <section class="flex justify-center items-center">
+        <section class="lg:w-4/6">
+          <!-- description section start -->
+          <section class="text-center">
+            <p class="mb-2 text-base font-medium">Our Best Pricing Plan</p>
+            <p class="text-2xl font-bold mb-6">Choose plan that’s right for you</p>
+          </section>
+          <!-- description section end -->
+          <!-- choose plan button section start -->
+          <div class="flex w-full justify-center">
+            <div v-if="selectedPrice === 'month'">
+              <section
+                  class="flex justify-center bg-white mb-6 rounded-[100px]"
+              >
+                <button
+                    class="bg-purple-1 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
+                  @click="perMonthPrice"
+                >
+                  Monthly
+                </button>
+                <button
+                    class="hover:text-white hover:bg-blue-600 text-dark-500 font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
+                  @click="perYearPrice"
+                >
+                  Yearly
+                </button>
+              </section>
+            </div>
+            <div v-if="selectedPrice === 'year'">
+              <section
+                  class="flex justify-center bg-white rounded-[100px] mb-6"
+              >
+                <button
+                    class="hover:bg-blue-600 hover:text-white text-dark-500 font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
+                  @click="perMonthPrice"
+                >
+                  Monthly
+                </button>
+                <button
+                    class="bg-purple-1 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
+                  @click="perYearPrice"
+                >
+                  Yearly
+                </button>
+              </section>
+            </div>
+          </div>
+          <!-- choose plan button section end -->
+          <!-- price section start -->
+          <!-- grid grid-flow-col auto-cols-max -->
         </section>
-        <!-- description section end -->
-        <!-- choose plan button section start -->
-        <div class="flex w-full justify-center">
-          <div v-if="selectedPrice === 'month'">
-            <section
-                class="flex justify-center bg-white mb-6 rounded-[100px]"
-            >
-              <button
-                  class="bg-purple-1 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                @click="perMonthPrice"
-              >
-                Monthly
-              </button>
-              <button
-                  class="hover:text-white hover:bg-blue-600 text-dark-500 font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                @click="perYearPrice"
-              >
-                Yearly
-              </button>
-            </section>
-          </div>
-          <div v-if="selectedPrice === 'year'">
-            <section
-                class="flex justify-center bg-white rounded-[100px] mb-6"
-            >
-              <button
-                  class="hover:bg-blue-600 hover:text-white text-dark-500 font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                @click="perMonthPrice"
-              >
-                Monthly
-              </button>
-              <button
-                  class="bg-purple-1 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                @click="perYearPrice"
-              >
-                Yearly
-              </button>
-            </section>
-          </div>
-        </div>
-        <!-- choose plan button section end -->
-        <!-- price section start -->
-        <!-- grid grid-flow-col auto-cols-max -->
       </section>
-    </section>
-    <!-- :loop="true" -->
-    <div class="">
-      <Swiper
-        :modules="[SwiperAutoplay, SwiperPagination, SwiperEffectCreative]"
-        :slides-per-view="1"
-        :effect="'creative'"
-        :pagination="{
-          clickable: true,
-        }"
-        :creative-effect="{
-          prev: {
-            shadow: false,
-            translate: ['20%', 0, -1],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        }"
-      >
-        <SwiperSlide v-for="price in priceData" :key="price.id">
-            <!-- Price section 1 -->
-            <section
-              class="rounded-2xl px-4 py-6"
-              :class="[price.color, price.textColor]"
-            >
-              <div class="h-full">
-                <section class="flex justify-center mb-2">
-                  <img :src="price.image ?? ''" alt="" />
-                </section>
-                <section class="flex justify-center mb-4 text-[18px] font-semibold">
-                  <p>{{ price?.title }}</p>
-                </section>
-                <section class="mb-4">
-                  <section class="flex justify-center items-center mb-4">
-                    <p class="m-0 text-md text-2xl font-semibold leading-none">
-                      ${{ price?.price }}
-                    </p>
-                    <p class="m-0 ms-2 font-medium">/ Per Month</p>
+      <!-- :loop="true" -->
+      <div class="">
+        <Swiper
+          :modules="[SwiperAutoplay, SwiperPagination, SwiperEffectCreative]"
+          :slides-per-view="1"
+          :effect="'creative'"
+          :pagination="{
+            clickable: true,
+          }"
+          :creative-effect="{
+            prev: {
+              shadow: false,
+              translate: ['20%', 0, -1],
+            },
+            next: {
+              translate: ['100%', 0, 0],
+            },
+          }"
+        >
+          <SwiperSlide v-for="price in priceData" :key="price.id">
+              <!-- Price section 1 -->
+              <section
+                class="rounded-2xl px-4 py-6"
+                :class="[price.color, price.textColor]"
+              >
+                <div class="h-full">
+                  <section class="flex justify-center mb-2">
+                    <img :src="price.image ?? ''" alt="" />
                   </section>
-                  <section class="">
-                    <p class="text-xs font-medium mb-4">
-                      {{ price.description }}
-                    </p>
-                    <section class="" v-for="option in price.options">
-                      <div class="flex justify-start item-center mb-2">
-                        <div>
-                          <img src="~assets/img/price/teenyicons_tick-small-solid.svg" alt="">
+                  <section class="flex justify-center mb-4 text-[18px] font-semibold">
+                    <p>{{ price?.title }}</p>
+                  </section>
+                  <section class="mb-4">
+                    <section class="flex justify-center items-center mb-4">
+                      <p class="m-0 text-md text-2xl font-semibold leading-none">
+                        ${{ price?.price }}
+                      </p>
+                      <p class="m-0 ms-2 font-medium">/ Per Month</p>
+                    </section>
+                    <section class="">
+                      <p class="text-xs font-medium mb-4">
+                        {{ price.description }}
+                      </p>
+                      <section class="" v-for="option in price.options">
+                        <div class="flex justify-start item-center mb-2">
+                          <div>
+                            <img src="~assets/img/price/teenyicons_tick-small-solid.svg" alt="">
+                          </div>
+                          <p class="ps-2 text-sm font-medium">{{ option ?? "" }}</p>
                         </div>
-                        <p class="ps-2 text-sm font-medium">{{ option ?? "" }}</p>
-                      </div>
+                      </section>
                     </section>
                   </section>
-                </section>
-                <section
-                  class="flex justify-center lg:mt-0 lg:h-[56px] pt-6 pb-6"
-                >
-                  <button
-                    class="px-[95px] py-3 border rounded-[8px] text-purple-1 hover:opacity-75"
-                    :class="[price.textColor, price.border, price.hover]" @click="goToContact"
+                  <section
+                    class="flex justify-center lg:mt-0 lg:h-[56px] pt-6 pb-6"
                   >
-                    Contact Us
-                  </button>
-                </section>
-              </div>
-            </section>
-        </SwiperSlide>
-      </Swiper>
+                    <button
+                      class="px-[95px] py-3 border rounded-[8px] text-purple-1 hover:opacity-75"
+                      :class="[price.textColor, price.border, price.hover]" @click="goToContact"
+                    >
+                      Contact Us
+                    </button>
+                  </section>
+                </div>
+              </section>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <!-- body price section end -->
     </div>
-    <!-- body price section end -->
   </div>
 </template>
 

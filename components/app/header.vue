@@ -12,6 +12,16 @@
       {id: 5, name: 'Blogs', path:'#blogs'},
       {id: 6, name: 'Contact Us', path:'#contact'},
     ]
+    const scrollToElement = (elementId) => {
+      const element = document.getElementById(elementId);
+      console.log("scro;;",element)
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
+    };
 </script>
 <template>
   <header>
@@ -38,13 +48,15 @@
           <ul
               class="flex flex-col font-medium md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
-            <li v-for="item in navItems" :key="item.path">
-              <a :href="item.path"
-                 class="block text-[18px] py-2 pl-3 pr-4 hover:text-purple-1"
-                 :class="{ 'text-purple-1': isCurrentPage(item.path) }">
+              <NuxtLink
+                  v-for="item in navItems" :key="item.path"
+                  :to="item.path"
+                  class="block text-[18px] py-2 pl-3 pr-4 hover:text-purple-1"
+                  :class="{ 'text-purple-1': isCurrentPage(item.path) }"
+                  @click="scrollToElement(item.path)"
+              >
                 {{ item.name }}
-              </a>
-            </li>
+              </NuxtLink>
           </ul>
         </div>
       </div>
