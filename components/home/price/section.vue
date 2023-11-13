@@ -114,7 +114,7 @@
                 <section class="flex justify-center">
                   <button
                     class="border xl:px-[6.25rem] lg:px-[4rem] py-4 rounded-[8px] text-purple-1 hover:opacity-75"
-                    :class="(price.textColor, price.border, price.hover)"
+                    :class="[price.textColor, price.border, price.hover]"
                     @click="goToContact"
                   >
                     Contact Us
@@ -311,14 +311,14 @@ const perYearPrice = () => {
   width: 50%;
   font-size: 18px;
   line-height: 30px;
-  color: #000;
+  color: #2b2b2b;
   text-align: center;
   cursor: pointer;
   position: inherit;
   z-index: 10;
   transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
-  font-weight: 900;
+  font-weight: 500;
   padding-top: 9px;
 }
 

@@ -43,27 +43,30 @@ const submitForm = async (event) => {
               <div class="flex flex-col mb-4">
                 <label class="w-full">Your Name</label>
                 <input :class="inputClass"
-                       type="text" v-model="formData.name" placeholder="Your Name Here"/>
+                       type="text" v-model="formData.name" placeholder="Your Name Here" required/>
               </div>
               <div class="lg:flex lg:justify-between lg:space-x-4 mb-4">
                 <label class="w-full">Phone
-                <input :class="inputClass" type="tel" placeholder="+880"/>
+                <input :class="inputClass" type="tel" placeholder="+880" required/>
                 </label>
                 <label class="w-full">Email
-                <input :class="inputClass" v-model="formData.email" type="email" placeholder="john@example.com"/>
+                <input :class="inputClass" v-model="formData.email" type="email" required placeholder="john@example.com"/>
                 </label>
               </div>
               <div class="lg:flex lg:justify-between lg:space-x-4 mb-4">
                 <label class="w-full">Subject Choose
                   <select :class="inputClass" v-model="formData.subject">
-                    <option>Select your subject</option>
-                    <option>abc</option>
+                    <option disabled value="" class="text-gray-6">Select Your Subject</option>
+                    <option value="1">Garage Details</option>
+                    <option value="2">Pricing Details</option>
+                    <option value="3">Service Details</option>
                   </select>
                 </label>
                 <label class="w-full">What do you prefer?
                   <select :class="inputClass" v-model="formData.prefers">
-                    <option>Physical Meeting</option>
-                    <option>abc</option>
+                    <option disabled value="" class="text-gray-6">Select Your Preference</option>
+                    <option value="1">On Sight Meeting</option>
+                    <option value="2">Virtual Meeting</option>
                   </select>
                 </label>
               </div>
