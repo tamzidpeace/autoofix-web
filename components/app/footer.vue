@@ -11,14 +11,11 @@ import Instagram from "../../assets/img/footer/Icon/Social icon (5).svg"
 const usefulLinks = [
   { id: 1, text: "About us", url: "#about" },
   { id: 2, text: "Contacts", url: "#contact" },
-  { id: 3, text: "Blogs", url: "#blog" },
-  { id: 4, text: "Support Service", url: "#service" },
+  { id: 3, text: "Blogs", url: "#blogs" },
 ];
 const supportLinks = [
   { id: 1, text: "Community", url: "#" },
-  { id: 2, text: "Faqs", url: "#" },
-  { id: 3, text: "Careers", url: "#" },
-  { id: 4, text: "Privacy Policy", url: "#" },
+  { id: 2, text: "Faqs", url: "#faqs" },
 ];
 const Img = [Twitter ,Linkend,  Facebook, Pinterest, Telegram, Instagram ]
 let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[4px] h-[40px]';
@@ -59,9 +56,9 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
       </div>
       <div class="col-span-1 lg:mb-2">
         <h1 class="lg:text-2xl lg:mb-3 text-base font-bold">Get In Touch</h1>
-        <p class="lg:mb-3 lg:text-base text-xs">23, Tropical Akhand Tower (Level: 03-04), Garib-e-Newaz Avenue, Sector: 11, Uttara, Dhaka - 1230</p>
-        <a class="lg:mb-3 lg:text-base text-xs">Email: info@garazino.com</a>
-        <div class="flex space-x-4">
+        <p class="lg:mb-2 lg:text-base text-xs">23, Tropical Akhand Tower (Level: 03-04), Garib-e-Newaz Avenue, Sector: 11, Uttara, Dhaka - 1230</p>
+        <a class="lg:text-base text-xs">Email: info@garazino.com</a>
+        <div class="flex space-x-4 lg:mb-2 lg:mt-2">
           <img v-for="item in Img" :src="item" :key="item" alt="Social Icon">
         </div>
       </div>

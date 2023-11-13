@@ -9,8 +9,10 @@
       {id: 2, name: 'About Us', path:'#about'},
       {id: 3, name: 'Features', path:'#feature'},
       {id: 4, name: 'Prices', path:'#price'},
-      {id: 5, name: 'Blogs', path:'#blogs'},
-      {id: 6, name: 'Contact Us', path:'#contact'},
+      {id: 5, name: 'Products', path:'#product'},
+      {id: 6, name: 'FAQs', path:'#faqs'},
+      {id: 7, name: 'Blogs', path:'#blogs'},
+      {id: 8, name: 'Contact Us', path:'#contact'},
     ]
     const scrollToElement = (elementId) => {
       const element = document.getElementById(elementId);
@@ -31,8 +33,9 @@
           <img src="~/assets/img/Mask%20group.svg" class="h-8 mr-3" alt="Autofix Logo" />
         </NuxtLink>
         <div class="flex md:order-2">
-          <button type="button" class="hidden lg:block">
-            <img src="~/assets/img/demoexplorebtn.png" class="h-8 mr-3" alt="Autofix Logo" />
+          <button type="button" class="hidden rounded-[4px] px-6 py-3 lg:flex bg-purple-1 text-white space-x-2 font-medium">
+            Demo Explore
+            <img src="~/assets/img/footer/Icon/ic_outline-arrow-outward.svg" class="h-6 w-6" alt="Autofix Logo" />
           </button>
           <button data-collapse-toggle="navbar-cta" type="button"
                   class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -46,12 +49,12 @@
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
           <ul
-              class="flex flex-col font-medium md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+              class="flex flex-col font-medium md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-4 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
               <NuxtLink
                   v-for="item in navItems" :key="item.path"
                   :to="item.path"
-                  class="block text-[18px] py-2 pl-3 pr-4 hover:text-purple-1"
+                  class="block py-2 pl-3 pr-4 hover:text-purple-1"
                   :class="{ 'text-purple-1': isCurrentPage(item.path) }"
                   @click="scrollToElement(item.path)"
               >

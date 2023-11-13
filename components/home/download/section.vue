@@ -22,14 +22,8 @@
             </div>
             <!-- download button group -->
             <div class="flex justify-center lg:justify-start">
-              <button class="hidden lg:block mb-12">
-                <img
-                  src="~/assets/img/googleplaystorepcdownloadsection.png"
-                  alt=""
-                />
-              </button>
-              <button class="lg:hidden mb-6">
-                <img src="~/assets/img/googleplaybtnmobile.png" alt="" />
+              <button class="mb-6 lg:mb-12">
+                <img class="" src="~/assets/img/button/Mobile%20app%20store%20badge.svg" alt="" />
               </button>
             </div>
             <!-- downloaded info section -->
