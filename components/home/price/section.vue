@@ -318,7 +318,7 @@ const perYearPrice = () => {
   z-index: 10;
   transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
-  font-weight: 900;
+  font-weight: 500;
   padding-top: 9px;
 }
 

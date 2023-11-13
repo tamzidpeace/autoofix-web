@@ -2,7 +2,7 @@
 import Logo from "../../assets/img/footer/Mask group (1).png"
 import TireImg from "../../assets/img/footer/Ellipse 1669.png"
 import Twitter from "../../assets/img/footer/Icon/Social icon.svg"
-import Linkend from "../../assets/img/footer/Icon/Social icon (1).svg"
+import LinkedIn from "../../assets/img/footer/Icon/Social icon (1).svg"
 import Facebook from "../../assets/img/footer/Icon/Social icon (2).svg"
 import Pinterest from "../../assets/img/footer/Icon/Social icon (3).svg"
 import Telegram from "../../assets/img/footer/Icon/Social icon (4).svg"
@@ -17,7 +17,7 @@ const supportLinks = [
   { id: 1, text: "Community", url: "#" },
   { id: 2, text: "Faqs", url: "#faqs" },
 ];
-const Img = [Twitter ,Linkend,  Facebook, Pinterest, Telegram, Instagram ]
+const Img = [Twitter ,LinkedIn,  Facebook, Pinterest, Telegram, Instagram ]
 let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[4px] h-[40px]';
 </script>
 
