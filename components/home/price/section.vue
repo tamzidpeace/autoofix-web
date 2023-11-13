@@ -143,41 +143,33 @@
           <!-- description section end -->
           <!-- choose plan button section start -->
           <div class="flex w-full justify-center">
-            <div v-if="selectedPrice === 'month'">
-              <section
-                class="flex justify-center bg-white mb-6 rounded-[100px]"
-              >
-                <button
-                  class="bg-purple-1 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                  @click="perMonthPrice"
-                >
-                  Monthly
-                </button>
-                <button
-                  class="hover:text-white hover:bg-blue-600 text-dark-500 font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                  @click="perYearPrice"
-                >
-                  Yearly
-                </button>
-              </section>
-            </div>
-            <div v-if="selectedPrice === 'year'">
-              <section
-                class="flex justify-center bg-white rounded-[100px] mb-6"
-              >
-                <button
-                  class="hover:bg-blue-600 hover:text-white text-dark-500 font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                  @click="perMonthPrice"
-                >
-                  Monthly
-                </button>
-                <button
-                  class="bg-purple-1 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-[100px] focus:outline-none focus:ring focus:ring-blue-300"
-                  @click="perYearPrice"
-                >
-                  Yearly
-                </button>
-              </section>
+            <div class="mb-8">
+              <div>
+                <div class="switcher">
+                  <input
+                    type="radio"
+                    name="balance"
+                    value="yin"
+                    id="yin"
+                    class="switcher__input switcher__input--yin"
+                    checked="true"
+                    @click="perMonthPrice"
+                  />
+                  <label for="yin" class="switcher__label">Monthly</label>
+
+                  <input
+                    type="radio"
+                    name="balance"
+                    value="yang"
+                    id="yang"
+                    class="switcher__input switcher__input--yang"
+                    @click="perYearPrice"
+                  />
+                  <label for="yang" class="switcher__label">Yearly</label>
+
+                  <span class="switcher__toggle"></span>
+                </div>
+              </div>
             </div>
           </div>
           <!-- choose plan button section end -->
@@ -287,8 +279,10 @@ const perMonthPrice = () => {
 const perYearPrice = () => {
   selectedPrice.value = "year";
   let pricePerYear = [];
-  priceData.value.map((price) => {
-    let priceObject = { ...price, price: price.price * 10 };
+
+  priceData.value.map((price, index) => {
+    const updatePrice = prices[index].price;
+    let priceObject = { ...price, price: updatePrice * 10 };
     pricePerYear.push(priceObject);
   });
   priceData.value = pricePerYear;
