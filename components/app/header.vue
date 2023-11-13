@@ -33,7 +33,7 @@
           <img src="~/assets/img/Mask%20group.svg" class="h-8 mr-3" alt="Autofix Logo" />
         </NuxtLink>
         <div class="flex md:order-2">
-          <button type="button" class="hidden rounded-[4px] px-6 py-3 lg:flex bg-purple-1 text-white space-x-2 font-medium">
+          <button type="button" class="hidden rounded-[4px] px-4 py-2 xl:px-6 xl:py-3 lg:flex bg-purple-1 text-white space-x-2 font-medium">
             Demo Explore
             <img src="~/assets/img/footer/Icon/ic_outline-arrow-outward.svg" class="h-6 w-6" alt="Autofix Logo" />
           </button>
@@ -54,7 +54,7 @@
               <NuxtLink
                   v-for="item in navItems" :key="item.path"
                   :to="item.path"
-                  class="block py-2 pl-3 pr-4 hover:text-purple-1"
+                  class="block text-sm xl:text-base py-2 px-2 hover:text-purple-1"
                   :class="{ 'text-purple-1': isCurrentPage(item.path) }"
                   @click="scrollToElement(item.path)"
               >
