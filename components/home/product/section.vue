@@ -39,8 +39,8 @@ const ProductItem = [
                   <img src="~/assets/img/product/Group-3482-1%201.svg" alt="">
               </div>
           </div>
-    </section>
-    <!-- for phone -->
+      </section>
+        <!-- for phone -->
         <section class="lg:hidden bg-gray-3 py-12 px-4 md:px-[3rem]">
             <div class="">
                 <div class="flex flex-col justify-center">

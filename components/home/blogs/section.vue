@@ -47,7 +47,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
               {{ list[0].description }}
             </p>
             <nuxt-link
-              :to="`/blog?blogId=${list[0].id}`"
+              :to="`/blog?k=${list[0].slug}`"
               class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
             >
               Read More
@@ -79,7 +79,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
               <h1 class="font-bold text-2xl mb-4 line-clamp-2">{{ list[1].title }}</h1>
               <p class="mb-6 line-clamp-3">{{ list[1].description }}</p>
               <nuxt-link
-                :to="`/blog?blogId=${list[1].id}`"
+                :to="`/blog?k=${list[1].slug}`"
                 class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
               >
                 Read More
@@ -113,7 +113,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
                   {{ list[2].description }}
                 </p>
                 <nuxt-link
-                  :to="`/blog?blogId=${list[2].id}`"
+                  :to="`/blog?k=${list[2].slug}`"
                   class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
                 >
                   Read More
@@ -158,7 +158,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
                 {{ blog.description }}
               </p>
               <nuxt-link
-                :to="`/blog?blogId=${blog.id}`"
+                :to="`/blog?k=${blog.slug}`"
                 class="text-[14px] text-purple-1 cursor-pointer font-bold"
               >
                 Read More

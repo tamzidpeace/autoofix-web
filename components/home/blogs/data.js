@@ -21,7 +21,8 @@ export const blogInfo = [
             'mobile and responsive web application for garage management with CMS.' +
             'obile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
             'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
-            'mobile and responsive web application for garage management with CMS.'
+            'mobile and responsive web application for garage management with CMS.',
+        slug: 'our-blog-page-first'
     },
     {
         id: 2,
@@ -36,6 +37,7 @@ export const blogInfo = [
             'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
             'mobile and responsive web application for garage management with CMS. Fully automated Garage Management System(GMS) is a cloud-based' +
             'mobile and responsive web application for garage management with CMS.',
+        slug: 'our-blog-page-second'
     },
     {
         id: 3,
@@ -44,6 +46,7 @@ export const blogInfo = [
         read: '50',
         title: 'Established fact reader will be distracted fact that a reader.',
         description: 'Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS.',
+        slug: 'our-blog-page-third',
     },
     {
         id: 4,
@@ -52,6 +55,7 @@ export const blogInfo = [
         read: '5',
         title: 'Established fact reader will be distracted fact that a reader.',
         description: 'Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS.',
+        slug: 'our-blog-page-fourth',
     },
     {
         id: 5,
@@ -59,6 +63,6 @@ export const blogInfo = [
         image: Image2,
         read: '5',
         title: 'Established fact reader will be distracted fact that a reader.',
-        description: 'Fully automated Garage Management System(GMS) is a cloud-based mobile and responsive web application for garage management with CMS.',
+        slug: 'our-blog-page-fifth',
     },
 ]

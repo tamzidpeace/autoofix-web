@@ -15,9 +15,9 @@ const usefulLinks = [
 ];
 const supportLinks = [
   { id: 1, text: "Community", url: "#" },
-  { id: 2, text: "Faqs", url: "#faqs" },
+  { id: 2, text: "FAQs", url: "#faqs" },
 ];
-const Img = [Twitter ,LinkedIn,  Facebook, Pinterest, Telegram, Instagram ]
+const Img = [ Twitter ,LinkedIn,  Facebook, Pinterest, Telegram, Instagram ]
 let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[4px] h-[40px]';
 </script>
 

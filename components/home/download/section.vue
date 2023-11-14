@@ -9,9 +9,9 @@
         >
           <div class="">
             <div class="text-center lg:text-left lg:mb-6 mb-1">
-              <p class="text-2xl lg:text-[56px] font-bold mb-1">Download the App</p>
+              <p class="text-2xl lg:text-3xl xl:text-[56px] font-bold mb-1">Download the App</p>
               <br />
-              <p class="text-2xl lg:text-[56px] font-bold mb-1">Today and Get Started!</p>
+              <p class="text-2xl lg:text-3xl xl:text-[56px] font-bold mb-1">Today and Get Started!</p>
             </div>
             <div class="mb-6 lg:mb-12 text-center lg:text-left">
               <p class="text-sm lg:text-[18px] font-medium">
