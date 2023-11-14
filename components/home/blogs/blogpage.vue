@@ -2,9 +2,12 @@
 import { blogInfo } from "./data.js";
 const route = useRoute();
 const router = useRouter();
-const blogID = parseInt(route.query.blogId);
-const blog = blogInfo.find((blog) => blog.id === blogID);
-const blogId = blog.id;
+const blogID = route.query.k;
+console.log(blogID)
+
+const blog = blogInfo.find((blog) => blog.slug == blogID);
+
+const blogId = blog.slug;
 console.log("blog", blog);
 const previousPage = () => {
   window.history.back();
@@ -13,7 +16,7 @@ const previousPage = () => {
 <template>
   <ContentList path="/blogs" v-slot="{ list }">
     <div v-for="(singleBlog, index) in list" :key="singleBlog._path">
-      <div v-if="blogId == singleBlog.id">
+      <div v-if="blogId == singleBlog.slug">
         <div
           class="flex flex-col 3xl:px-[16rem] 3xl:py-[3rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[2rem] py-[44px] bg-[#F1F1F1]"
         >

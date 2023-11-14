@@ -137,7 +137,7 @@ defineComponent({
   box-shadow: 0 4px 24px 2px #54535B40;
 }
 
-.carousel__prev, .carousel__next {
+ .carousel__next, .carousel__prev  {
   border-radius: 28px !important;
   background: white !important;
   border: 1px solid #EAECF0 !important;

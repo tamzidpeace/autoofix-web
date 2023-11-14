@@ -150,22 +150,22 @@
                     type="radio"
                     name="balance"
                     value="yin"
-                    id="yin"
+                    id="yin2"
                     class="switcher__input switcher__input--yin"
                     checked="true"
                     @click="perMonthPrice"
                   />
-                  <label for="yin" class="switcher__label">Monthly</label>
+                  <label for="yin2" class="switcher__label">Monthly</label>
 
                   <input
                     type="radio"
                     name="balance"
                     value="yang"
-                    id="yang"
+                    id="yang2"
                     class="switcher__input switcher__input--yang"
                     @click="perYearPrice"
                   />
-                  <label for="yang" class="switcher__label">Yearly</label>
+                  <label for="yang2" class="switcher__label">Yearly</label>
 
                   <span class="switcher__toggle"></span>
                 </div>
