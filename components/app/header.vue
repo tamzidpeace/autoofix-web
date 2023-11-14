@@ -6,18 +6,16 @@
       };
     const navItems = [
       {id: 1, name: 'Home', path:'/'},
-      {id: 2, name: 'About Us', path:'#about'},
-      {id: 3, name: 'Features', path:'#feature'},
-      {id: 4, name: 'Prices', path:'#price'},
-      {id: 5, name: 'Products', path:'#product'},
-      {id: 6, name: 'FAQs', path:'#faqs'},
-      {id: 7, name: 'Blogs', path:'#blogs'},
-      {id: 8, name: 'Contact Us', path:'#contact'},
+      {id: 2, name: 'About Us', path:'about'},
+      {id: 3, name: 'Features', path:'feature'},
+      {id: 4, name: 'Prices', path:'price'},
+      {id: 5, name: 'Products', path:'product'},
+      {id: 6, name: 'FAQs', path:'faqs'},
+      {id: 7, name: 'Blogs', path:'blogs'},
+      {id: 8, name: 'Contact Us', path:'contact'},
     ]
     const scrollToElement = (elementId) => {
       const element = document.getElementById(elementId);
-      console.log("scro;;",element)
-
       if (element) {
         element.scrollIntoView({
           behavior: 'smooth',
@@ -53,9 +51,7 @@
           >
               <NuxtLink
                   v-for="item in navItems" :key="item.path"
-                  :to="item.path"
-                  class="block text-sm xl:text-base py-2 px-2 hover:text-purple-1"
-                  :class="{ 'text-purple-1': isCurrentPage(item.path) }"
+                  class="block text-sm cursor-pointer xl:text-base py-2 px-2 hover:text-purple-1"
                   @click="scrollToElement(item.path)"
               >
                 {{ item.name }}

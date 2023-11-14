@@ -12,13 +12,15 @@ const testimonial = ref(props.slide);
 <template>
   <div class="px-6 py-8 lg:px-0 lg:py-0">
     <div class="flex justify-center mb-4">
-      <img src="~/assets/img/testmonial/Group%201000010268.svg" alt="Testimonial" />
+      <img :src="testimonial.image" alt="Testimonial" />
     </div>
     <div class="flex justify-center">
       <div class="text-center">
         <h1 class="text-base lg:text-2xl lg:custom text-[#1C0081] font-bold mb-1">{{ testimonial.title }}</h1>
         <p class="text-sm text-gray-7">{{ testimonial.profession }}</p>
-        <p class="pt-6 text-sm text-gray-7">{{ testimonial.description }}</p>
+        <p class="pt-6 text-sm text-gray-7">
+          <ContentRenderer :value="testimonial"></ContentRenderer>
+        </p>
       </div>
     </div>
   </div>

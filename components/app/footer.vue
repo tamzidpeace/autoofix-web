@@ -9,14 +9,22 @@ import Telegram from "../../assets/img/footer/Icon/Social icon (4).svg"
 import Instagram from "../../assets/img/footer/Icon/Social icon (5).svg"
 
 const usefulLinks = [
-  { id: 1, text: "About us", url: "#about" },
-  { id: 2, text: "Contacts", url: "#contact" },
-  { id: 3, text: "Blogs", url: "#blogs" },
+  { id: 1, text: "About us", url: "about" },
+  { id: 2, text: "Contacts", url: "contact" },
+  { id: 3, text: "Blogs", url: "blogs" },
 ];
 const supportLinks = [
   { id: 1, text: "Community", url: "#" },
-  { id: 2, text: "FAQs", url: "#faqs" },
+  { id: 2, text: "FAQs", url: "faqs" },
 ];
+const scrollToElement = (elementId) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+};
 const Img = [ Twitter ,LinkedIn,  Facebook, Pinterest, Telegram, Instagram ]
 let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[4px] h-[40px]';
 </script>
@@ -43,14 +51,20 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
       <div class="col-span-1 grid grid-cols-2">
         <div class="flex flex-col">
           <h1 class="lg:text-2xl text-base lg:mb-3 font-bold">Useful Link</h1>
-        <span v-for="link in usefulLinks">
-          <a :key="link.id" :href="link.url" class="mb-3 lg:text-base text-xs">{{ link.text }}</a>
+        <span v-for="link in usefulLinks" :key="link.id">
+          <span @click.prevent="scrollToElement(link.url)"
+                class="mb-3 cursor-pointer hover:opacity-70 lg:text-base text-xs">
+            {{ link.text }}
+          </span>
         </span>
         </div>
         <div class="flex flex-col">
           <h1 class="lg:text-2xl text-base lg:mb-3 font-bold">Support</h1>
           <span v-for="link in supportLinks">
-            <a :key="link.id" :href="link.url" class="mb-3 lg:text-base text-xs">{{ link.text }}</a>
+            <span :key="link.id"
+               @click.prevent="scrollToElement(link.url)"
+               class="mb-3 lg:text-base hover:opacity-70 cursor-pointer text-xs">{{ link.text }}
+            </span>
           </span>
         </div>
       </div>
