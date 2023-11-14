@@ -39,7 +39,7 @@ const submitForm = async (event) => {
         <div>
           <h1 class="text-4xl font-bold mb-4">Let’s Get in Touch</h1>
           <form @submit.prevent="submitForm">
-            <div class="flex flex-col">
+            <div class="flex flex-col mb-8">
               <div class="flex flex-col mb-4">
                 <label class="w-full">Your Name</label>
                 <input :class="inputClass"
@@ -55,7 +55,7 @@ const submitForm = async (event) => {
               </div>
               <div class="lg:flex lg:justify-between lg:space-x-4 mb-4">
                 <label class="w-full">Subject Choose
-                  <select :class="inputClass" v-model="formData.subject">
+                  <select :class="inputClass" class="mb-4 lg:mb-0" v-model="formData.subject">
                     <option disabled value="" class="text-gray-6">Select Your Subject</option>
                     <option value="1">Garage Details</option>
                     <option value="2">Pricing Details</option>
@@ -63,7 +63,7 @@ const submitForm = async (event) => {
                   </select>
                 </label>
                 <label class="w-full">What do you prefer?
-                  <select :class="inputClass" v-model="formData.prefers">
+                  <select :class="inputClass" class="mb-4 lg:mb-0" v-model="formData.prefers">
                     <option disabled value="" class="text-gray-6">Select Your Preference</option>
                     <option value="1">On Sight Meeting</option>
                     <option value="2">Virtual Meeting</option>
@@ -80,7 +80,7 @@ const submitForm = async (event) => {
                 </label>
               </div>
               <div class="flex justify-end">
-                <button class="mt-4 bg-[#646BEE] text-white w-[158px] px-8 py-4 rounded-[4px]"
+                <button class="mt-4 bg-purple-1 text-white px-8 py-4 rounded-[4px]"
                         type="submit">Submit Now</button>
               </div>
             </div>

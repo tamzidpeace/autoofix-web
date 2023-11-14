@@ -296,7 +296,6 @@ const perYearPrice = () => {
   margin-top: 3px;
   padding: 4px;
   background: #fff;
-  border-radius: 2px;
   width: 290px;
   border-radius: 30px;
   position: relative;

@@ -2,13 +2,11 @@
 import { blogInfo } from "./data.js";
 const route = useRoute();
 const router = useRouter();
-const blogID = route.query.k;
-console.log(blogID)
-
-const blog = blogInfo.find((blog) => blog.slug == blogID);
-
+/*const  slug  = route.path;*/
+const path = router.currentRoute.value.path;
+const lastSegment = path.split('/').pop();
+const blog = blogInfo.find((blog) => blog.slug == lastSegment);
 const blogId = blog.slug;
-console.log("blog", blog);
 const previousPage = () => {
   window.history.back();
 };
@@ -33,7 +31,7 @@ const previousPage = () => {
               <div class="font-normal text-base mb-6">
                 <div class="float-right m-2">
                   <div class="flex flex-col">
-                    <img :src="blog.image" alt="" class="rounded-[8px] mb-3" />
+                    <img :src="singleBlog.img" alt="" class="rounded-[8px] mb-3" />
                   <div class="flex justify-between pb-3 text-gray-8">
                     <a
                       href=""
@@ -85,7 +83,8 @@ const previousPage = () => {
                   </div>
                   </div>
                 </div>
-                {{ singleBlog.description }}
+                <ContentRenderer :value="singleBlog">
+                </ContentRenderer>
               </div>
             </div>
           </div>

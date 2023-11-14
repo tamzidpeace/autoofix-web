@@ -1,5 +1,4 @@
 <script setup>
-import { blogInfo } from "./data.js";
 import Eye from "../../../assets/img/blogs/Group.svg"
 import Clock from "../../../assets/img/blogs/Vector.svg"
 </script>
@@ -17,7 +16,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
         <div class="w-full flex flex-wrap hidden lg:block">
           <div class="mb-3 w-full">
             <img
-              :src="blogInfo[0].image"
+              :src="list[0].img"
               alt=""
               class="object-cover w-full rounded-[8px]"
             />
@@ -47,7 +46,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
               {{ list[0].description }}
             </p>
             <nuxt-link
-              :to="`/blog?k=${list[0].slug}`"
+              :to="`/blogs/${list[0].slug}`"
               class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
             >
               Read More
@@ -58,7 +57,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
         <div class="flex flex-col hidden lg:block">
           <div class="flex mb-[30px]">
             <img
-              :src="blogInfo[1].image"
+              :src="list[1].img"
               alt=""
               class="object-cover rounded-[8px]"
             />
@@ -79,7 +78,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
               <h1 class="font-bold text-2xl mb-4 line-clamp-2">{{ list[1].title }}</h1>
               <p class="mb-6 line-clamp-3">{{ list[1].description }}</p>
               <nuxt-link
-                :to="`/blog?k=${list[1].slug}`"
+                :to="`/blogs/${list[1].slug}`"
                 class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
               >
                 Read More
@@ -89,7 +88,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
 
           <div class="flex justify-between mb-[30px]">
             <img
-              :src="blogInfo[2].image"
+              :src="list[2].img"
               alt=""
               class="object-cover rounded-[8px]"
             />
@@ -113,7 +112,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
                   {{ list[2].description }}
                 </p>
                 <nuxt-link
-                  :to="`/blog?k=${list[2].slug}`"
+                  :to="`/blogs/${list[2].slug}`"
                   class="text-[14px] hover:!text-blue-700 text-purple-1 cursor-pointer font-bold"
                 >
                   Read More
@@ -132,7 +131,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
           <div class="w-full lg:hidden">
             <div class="mb-3 w-full flex flex-wrap">
               <img
-                :src="blogInfo[index].image"
+                :src="list[index].img"
                 alt=""
                 class="w-full h-[22rem] w-full rounded-[8px]"
               />
@@ -158,7 +157,7 @@ import Clock from "../../../assets/img/blogs/Vector.svg"
                 {{ blog.description }}
               </p>
               <nuxt-link
-                :to="`/blog?k=${blog.slug}`"
+                :to="`/blogs/${blog.slug}`"
                 class="text-[14px] text-purple-1 cursor-pointer font-bold"
               >
                 Read More

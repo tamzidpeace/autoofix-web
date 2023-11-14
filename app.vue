@@ -1,8 +1,5 @@
 <script setup>
 useHead({
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'https://fav.farm/%F0%9F%9A%98' },
-    ],
     title: 'Autoofix',
     titleTemplate: '%s - http://autoofix.com/',
     meta: [
