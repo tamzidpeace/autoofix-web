@@ -16,6 +16,7 @@ const usefulLinks = [
 const supportLinks = [
   { id: 1, text: "Community", url: "#" },
   { id: 2, text: "FAQs", url: "faqs" },
+  { id: 3, text: "Testimonials", url: "testimonial" },
 ];
 const scrollToElement = (elementId) => {
   const element = document.getElementById(elementId);
@@ -38,9 +39,9 @@ let buttonClass = 'flex items-center border space-x-2 border-white p-1 rounded-[
         <img :src="Logo" alt="" class="lg:mb-3">
         <div class="flex flex-col">
           <p>Join our subscribers list to get instant latest news and special offers</p>
-          <div class="flex">
-            <input type="email" class="text-gray-700 z-20 border-none" placeholder="Your Email" >
-            <button class="bg-yellow-7 flex rounded items-center px-2">Subscribe
+          <div class="flex mt-1">
+            <input type="email" class="text-gray-700 z-20 rounded-l-[4px] border-none" placeholder="Your Email" >
+            <button class="bg-yellow-7 flex rounded-r-[4px] items-center px-2">Subscribe
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 5.99854V7.99854H14.59L5 17.5885L6.41 18.9985L16 9.40854V17.9985H18V5.99854H6Z" fill="white"/>
               </svg>

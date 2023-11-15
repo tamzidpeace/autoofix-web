@@ -12,7 +12,10 @@ const testimonial = ref(props.slide);
 <template>
   <div class="px-6 py-8 lg:px-0 lg:py-0">
     <div class="flex justify-center mb-4">
-      <img :src="testimonial.image" alt="Testimonial" />
+      <div class="flex flex-col">
+      <img :src="testimonial.image" alt="Testimonial" class="w-[118px] h-[118px] 3xl:w-[164px] 3xl:h-[164px] rounded-full border border-2 border-purple-1" />
+      <img src="~/assets/img/GroupTestimonial.svg" alt="" class="mt-[-12px]">
+      </div>
     </div>
     <div class="flex justify-center">
       <div class="text-center">

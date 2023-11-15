@@ -22,22 +22,22 @@
                   type="radio"
                   name="balance"
                   value="yin"
-                  id="yin"
+                  id="yin3"
                   class="switcher__input switcher__input--yin"
                   checked="true"
                   @click="perMonthPrice"
                 />
-                <label for="yin" class="switcher__label">Monthly</label>
+                <label for="yin3" class="switcher__label">Monthly</label>
 
                 <input
                   type="radio"
                   name="balance"
                   value="yang"
-                  id="yang"
+                  id="yang3"
                   class="switcher__input switcher__input--yang"
                   @click="perYearPrice"
                 />
-                <label for="yang" class="switcher__label">Yearly</label>
+                <label for="yang3" class="switcher__label">Yearly</label>
 
                 <span class="switcher__toggle"></span>
               </div>
@@ -52,7 +52,7 @@
           <div v-for="price in priceData">
             <section
               class="rounded-2xl px-6 py-8"
-              :class="[price.bgColor, price.textColor]"
+              :class="[price.color, price.textColor]"
             >
               <!-- :class="[price.color, price.textColor]" -->
               <div class="pt-8 h-full">
@@ -310,7 +310,6 @@ const perYearPrice = () => {
   width: 50%;
   font-size: 18px;
   line-height: 30px;
-  color: #2b2b2b;
   text-align: center;
   cursor: pointer;
   position: inherit;
@@ -330,6 +329,7 @@ const perYearPrice = () => {
   line-height: 30px;
   cursor: pointer;
   background-color: #646bee;
+  color: white !important;
   border-radius: 30px;
   left: 5px;
   top: 4px;
@@ -338,10 +338,14 @@ const perYearPrice = () => {
 }
 
 .switcher__input:checked + .switcher__label {
-  color: #fff;
+  color: #fff !important;
+}
+.switcher__input--yin:checked + .switcher__label {
+  color: #fff !important;
 }
 
 .switcher__input--yang:checked ~ .switcher__toggle {
   left: 140px;
+  color: #fff !important;
 }
 </style>
