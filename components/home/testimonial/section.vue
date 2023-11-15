@@ -17,10 +17,10 @@ defineComponent({
 
 </script>
 <template>
-  <div id="about" class="testimonials-style 3xl:px-[16.25rem] 3xl:py-[6.25rem] xl:px-[10rem] lg:py-[4rem] md:px-[2rem] py-10 px-4">
+  <div id="testimonial" class="testimonials-style 3xl:px-[16.25rem] 3xl:py-[6.25rem] xl:px-[10rem] lg:py-[4rem] md:px-[2rem] py-10 px-4">
     <div class="flex justify-center">
       <div class="mb-8">
-        <p class="text-base font-semibold text-center text-blue-8 mb-4">Testimonials</p>
+<!--        <p class="text-base font-semibold text-center text-blue-8 mb-4">Testimonials</p>-->
         <p class="text-center font-bold text-2xl lg:text-3xl">What our clients think about us?</p>
       </div>
     </div>
@@ -96,7 +96,7 @@ defineComponent({
 .carousel__slide--prev {
   transform: rotateY(-10deg) scale(0.95);
   padding: 25px 40px 25px 40px;
-  height: 30%;
+  height: 440px;
   margin-top: 51px;
   background-color: white;
   border-radius: 15px;
@@ -105,13 +105,17 @@ defineComponent({
   right: 1%;
   font-size: 12px;
   width: 50% !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   filter: grayscale(100%);
 }
 
 .carousel__slide--next {
   transform: rotateY(10deg) scale(0.95);
   /* border: 1px solid rgb(0, 218, 18); */
-  height: 30%;
+  height: 440px;
   margin-top: 51px;
   padding: 25px 40px 25px 40px;
   background-color: white;
@@ -121,16 +125,20 @@ defineComponent({
   z-index: -1;
   opacity: 70%;
   font-size: 12px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   filter: grayscale(100%);
 }
 
 .carousel__slide--active {
   opacity: 1;
   width: 54% !important;
-  padding: 65px 80px 65px 80px;
+  padding: 65px 70px 65px 70px;
   transform: rotateY(0) scale(0.9);
   border-radius: 15px;
-  /* background-color: #faf9ff; */
+  height: 540px;
   background-color: white;
   left: -27%;
   z-index: 10;

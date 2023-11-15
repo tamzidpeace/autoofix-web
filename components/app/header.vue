@@ -6,13 +6,12 @@
       };
     const navItems = [
       {id: 1, name: 'Home', path:'/'},
-      {id: 2, name: 'About Us', path:'about'},
-      {id: 3, name: 'Features', path:'feature'},
+      {id: 2, name: 'Features', path:'feature'},
+      {id: 3, name: 'Testimonials', path:'testimonial'},
       {id: 4, name: 'Prices', path:'price'},
-      {id: 5, name: 'Products', path:'product'},
-      {id: 6, name: 'FAQs', path:'faqs'},
-      {id: 7, name: 'Blogs', path:'blogs'},
-      {id: 8, name: 'Contact Us', path:'contact'},
+      {id: 5, name: 'FAQs', path:'faqs'},
+      {id: 6, name: 'Blogs', path:'blogs'},
+      {id: 7, name: 'Contact Us', path:'contact'},
     ]
     const scrollToElement = (elementId) => {
       const element = document.getElementById(elementId);
