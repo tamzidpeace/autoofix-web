@@ -13,7 +13,7 @@ const previousPage = () => {
 </script>
 <template>
   <ContentList path="/blogs" v-slot="{ list }">
-    <div v-for="(singleBlog, index) in list" :key="singleBlog._path">
+    <div v-for="(singleBlog, index) in list" :key="singleBlog._path" class="mb-[3rem]">
       <div v-if="blogId == singleBlog.slug">
         <div
           class="flex flex-col 3xl:px-[16rem] 3xl:py-[3rem] xl:px-[10rem] lg:px-[3rem] lg:py-[2rem] px-[2rem] py-[44px] bg-[#F1F1F1]"
